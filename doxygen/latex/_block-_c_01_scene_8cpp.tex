@@ -1,0 +1,1349 @@
+\hypertarget{_block-_c_01_scene_8cpp}{}\doxysection{F\+:/\+BITS/\+IS F311 L1/dev-\/glut/proj1/final/\+Computer Graphics/\+Block-\/C Scene.\+cpp File Reference}
+\label{_block-_c_01_scene_8cpp}\index{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/Computer Graphics/Block-\/C Scene.cpp@{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/Computer Graphics/Block-\/C Scene.cpp}}
+{\ttfamily \#include $<$GL/\+Gl.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glut.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}{draw\+Dot}} (GLint x, GLint y)
+\begin{DoxyCompactList}\small\item\em Plots a point on the Open\+GL window based on the coordinates provided. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}{swap}} (int \&a, int \&b)
+\begin{DoxyCompactList}\small\item\em Swaps two integer values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}{my\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes several state variables of the Open\+GL system with appropriate values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}{lineplot}} (int x0, int y0, int x1, int y1)
+\begin{DoxyCompactList}\small\item\em Line drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a8d12a62f6efc642f1933b0843ed415cb}{draw\+Circle}} (GLint x, GLint y, GLint x0, GLint y0)
+\begin{DoxyCompactList}\small\item\em Draws set of eight points for any given point in a circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a0728e87b4de6d4dd8dc825e347c2b0e0}{draw\+Half\+Circle}} (GLint x, GLint y, GLint x0, GLint y0)
+\begin{DoxyCompactList}\small\item\em Draws set of four points for any given point in a semicircle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a19e024b00e35fb40ae6d8055b4653cd4}{circle\+Plot}} (int x0, int y0, int r)
+\begin{DoxyCompactList}\small\item\em Circle drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7e456adc2e74c4359e87b3d32abfbe56}{halfcircle\+Plot}} (int x0, int y0, int r)
+\begin{DoxyCompactList}\small\item\em Semi-\/circle drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a85b5e266e82597f163d78c38fdcf62e5}{draw\+Ellipse}} (int a, int b, GLint valx, GLint valy)
+\begin{DoxyCompactList}\small\item\em Ellipse drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}{draw\+Polygon}} (const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}{pts}}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Plots the lines in a cyclic loop to create a polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}{my\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em The my\+Display function calls all the other drawing subroutines. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em The main function from where all the other functions are called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}{screen\+Width}} = 1080
+\begin{DoxyCompactList}\small\item\em Width of the Open\+GL screen output. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}{screen\+Height}} = 760
+\begin{DoxyCompactList}\small\item\em Height of the Open\+GL screen output. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}{mode}} = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE
+\begin{DoxyCompactList}\small\item\em RGB color space is used along with single display buffer mode. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}{pts}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em left bottom \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a06c824de48022d31ebf66e889d967185}{pts1}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em right bottom \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a882ce37d577fb6fe51910fb22a1899d8}{pts2}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em left stairs\+\_\+1 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5776ab5d1980e16d9c11250f385d0095}{pts3}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em left stairs\+\_\+2 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac02cb05500d7f53bf2d73280cf1bcc61}{pts4}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em right stairs\+\_\+1 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4b71d13dba6a27e1f24b0dad62aeb528}{pts5}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em right stairs\+\_\+2 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab612cc464a40094c107eb79a6c0e43b1}{pts6}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em top\+\_\+mid \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_adc2fc1e858ec6801b1c90e3aa946746f}{pts7}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em windows \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5ba5695bd2706e408a544f4167211aac}{pts8}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aadc82009f9f893cc4431980dc8819c6b}{pts9}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2d160fec321ddf760b9bdb36cfbb96ee}{pts10}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a083fd14fba996058a5532a14caf3a804}{pts11}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5ab746acd10123f21a6c05242a33763a}{pts12}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a42661df27a7ce3837ffdf19b517eccaa}{pts13}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_abb1a25530c6e2fa097421b03b96e4056}{pts14}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab49da7ea6ed2ced924d406e154660b4f}{pts15}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7018294f34948f519a32172303f0db7b}{p0}} \mbox{[}2\mbox{]} = \{280, 40\}
+\begin{DoxyCompactList}\small\item\em walkway\+\_\+1 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab413d8607112729b0bddf1b78faba3d1}{p1}} \mbox{[}2\mbox{]} = \{800, 40\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a646afb516d1230300c4f38e0253dd335}{p2}} \mbox{[}2\mbox{]} = \{288, 80\}
+\begin{DoxyCompactList}\small\item\em walkway\+\_\+2 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_adc3c8dd2a1ad88dbe00babe0128435a0}{p3}} \mbox{[}2\mbox{]} = \{788, 80\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4539245dbd71ad2757678ca4cfd583c9}{p4}} \mbox{[}2\mbox{]} = \{294, 120\}
+\begin{DoxyCompactList}\small\item\em walkway\+\_\+3 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac9efdee756bc435e3545194321c20fbd}{p5}} \mbox{[}2\mbox{]} = \{780, 120\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a0cf979bfad10887cba48c38a31fd853d}{p6}} \mbox{[}2\mbox{]} = \{170, 190\}
+\begin{DoxyCompactList}\small\item\em stairs bottom\+\_\+1 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_afccfdf4c544b8d901cb76c2499e8484a}{p7}} \mbox{[}2\mbox{]} = \{910, 190\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a20592623ef92571bd21627c7dddad0cb}{p8}} \mbox{[}2\mbox{]} = \{200, 230\}
+\begin{DoxyCompactList}\small\item\em stairs bottom\+\_\+2 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a9945ba54d0077834701661f20a14dce1}{p9}} \mbox{[}2\mbox{]} = \{880, 230\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5591295b75966607f250a079b85b45d9}{p10}} \mbox{[}2\mbox{]} = \{200, 230\}
+\begin{DoxyCompactList}\small\item\em stairs left \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa1637a414fedb7835f85d144fea0a1d3}{p11}} \mbox{[}2\mbox{]} = \{200, 350\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7e1aac29ed4b4497c556ed52c58a2eec}{p12}} \mbox{[}2\mbox{]} = \{880, 230\}
+\begin{DoxyCompactList}\small\item\em stairs right \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2aa2d5ebe063ff959ea843d888c0c16e}{p13}} \mbox{[}2\mbox{]} = \{880, 350\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2a1bafa8cfcdf067839bf39c05237194}{p14}} \mbox{[}2\mbox{]} = \{0, 350\}
+\begin{DoxyCompactList}\small\item\em platform \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a0d3e36afacf1dfaa053b44f582d9a71a}{p15}} \mbox{[}2\mbox{]} = \{1080, 350\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac089bf4217b32022210ff283b38cd845}{p16}} \mbox{[}2\mbox{]} = \{0, 480\}
+\begin{DoxyCompactList}\small\item\em mid\+\_\+1 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5428daceea6e299bf51c2e2163a393b6}{p17}} \mbox{[}2\mbox{]} = \{1080, 480\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5e1be1417c171a0812eacdb292e91e1c}{p18}} \mbox{[}2\mbox{]} = \{240, 480\}
+\begin{DoxyCompactList}\small\item\em mid\+\_\+2 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a636051b8f2a401cf57f040a4d2a2eda4}{p19}} \mbox{[}2\mbox{]} = \{240, 350\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa326e29d0401d229e4b009d5d56cdad4}{p20}} \mbox{[}2\mbox{]} = \{840, 480\}
+\begin{DoxyCompactList}\small\item\em mid\+\_\+3 \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5e7996bcbd53a71a633a21f3a8068ea6}{p21}} \mbox{[}2\mbox{]} = \{840, 350\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a55ed85e80dd21be6761a3c5af461fa20}{p22}} \mbox{[}2\mbox{]} = \{0, 620\}
+\begin{DoxyCompactList}\small\item\em top left \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7da9d9f597383396eb8bd580550bd730}{p23}} \mbox{[}2\mbox{]} = \{80, 600\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_acc95d1e7f8f1b1eea27d11136da3d702}{p24}} \mbox{[}2\mbox{]} = \{80, 480\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a86a9d7a3b04f6f3cde2731a7804bc9bc}{p25}} \mbox{[}2\mbox{]} = \{280, 600\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a69b035092855cc14f74ee05517450d12}{p26}} \mbox{[}2\mbox{]} = \{1080, 620\}
+\begin{DoxyCompactList}\small\item\em top right \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ae8c4fbc03056001b39ddb332d165fb4a}{p27}} \mbox{[}2\mbox{]} = \{1000, 600\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5f391dc5aeaedfb83ad88e488cca41dd}{p28}} \mbox{[}2\mbox{]} = \{1000, 480\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab76c40d590b7096114c6ddd8bff6d877}{p29}} \mbox{[}2\mbox{]} = \{800, 600\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a60c1688d1ba6e3d512e5724abecccd99}{p30}} \mbox{[}2\mbox{]} = \{160, 520\}
+\begin{DoxyCompactList}\small\item\em window lines \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a419d6edbe2c9d72126da601dd9cecc01}{p31}} \mbox{[}2\mbox{]} = \{160, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a3cfd8cb20ad3be12df9854d9bccd428e}{p32}} \mbox{[}2\mbox{]} = \{200, 520\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab874710d44a141c5753235a5dfcdbb51}{p33}} \mbox{[}2\mbox{]} = \{200, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a856a950893d54f0fb4e034a389c484d3}{p34}} \mbox{[}2\mbox{]} = \{920, 520\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa046eaa60a49bad7ae423043beaae744}{p35}} \mbox{[}2\mbox{]} = \{920, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aac602b7a2b1934c9589c45fa68e2559f}{p36}} \mbox{[}2\mbox{]} = \{880, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_af6a2d07b7150ae796027f34648e94474}{p37}} \mbox{[}2\mbox{]} = \{880, 520\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a6fdf297c4bfbb2c3ed682616cbde40a3}{p38}} \mbox{[}2\mbox{]} = \{350, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a71f783f5c4d3dd814d599f597b685bf6}{p39}} \mbox{[}2\mbox{]} = \{350, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2cd9ad4ad4786daeace0d39578a76629}{p40}} \mbox{[}2\mbox{]} = \{380, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a07d22f06a07e399c2a01e8c9449ba239}{p41}} \mbox{[}2\mbox{]} = \{380, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac11d5bf58c751828c2ac9d22bea817d4}{p42}} \mbox{[}2\mbox{]} = \{320, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a277828cfa8b882c8530f9bce7f8ea4d4}{p43}} \mbox{[}2\mbox{]} = \{410, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a264c356c222ffbeaf4c1eabe30137a39}{p44}} \mbox{[}2\mbox{]} = \{320, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a02f66bb54fb85a582e9a854c06f0ef1d}{p45}} \mbox{[}2\mbox{]} = \{410, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2df4fe8c969357805bc5c95a4dc351af}{p46}} \mbox{[}2\mbox{]} = \{700, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aeb83cd60fdaa39b59387656f13664b03}{p47}} \mbox{[}2\mbox{]} = \{700, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab6b0747c628938f3a1fc4058f087cb49}{p48}} \mbox{[}2\mbox{]} = \{730, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a232cec14705c8205d0f3dea3c6f959a5}{p49}} \mbox{[}2\mbox{]} = \{730, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a0350b16249e70759ea71a28a4f8cfc2f}{p50}} \mbox{[}2\mbox{]} = \{670, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_acf89a4d1d8b24e4de58d76c154cb777a}{p51}} \mbox{[}2\mbox{]} = \{760, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ab9a53b93b8602761343c0169db908580}{p52}} \mbox{[}2\mbox{]} = \{670, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_afae7de8414f807cc6e6741eae6dc4836}{p53}} \mbox{[}2\mbox{]} = \{760, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a255a2fb7f3644f9c72f23cab791956a1}{p54}} \mbox{[}2\mbox{]} = \{490, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_af1377a631428f17e502c12c7cbf358d3}{p55}} \mbox{[}2\mbox{]} = \{490, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a2891dbda6af849c48cbde0c918765b81}{p56}} \mbox{[}2\mbox{]} = \{520, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a34f8d4e1a4e1582e2d397f309d046734}{p57}} \mbox{[}2\mbox{]} = \{520, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_acf40eefe86f7ac9f33ea6ce7bbb4b281}{p58}} \mbox{[}2\mbox{]} = \{560, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a8d3aeb91c8306078d1830d28535c51c7}{p59}} \mbox{[}2\mbox{]} = \{560, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a0d32a8e8289500a2948186c570faa763}{p60}} \mbox{[}2\mbox{]} = \{590, 590\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_af147f0e22ecf6a41b7be1d37c2ae0e8c}{p61}} \mbox{[}2\mbox{]} = \{590, 500\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a3f571ec0cd312ba5c271912597ae6ec8}{p62}} \mbox{[}2\mbox{]} = \{470, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a72067294239f1bd456afc9e8cb60178b}{p63}} \mbox{[}2\mbox{]} = \{610, 560\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a53f29019388f0d1f1040157c8ad8b6d3}{p64}} \mbox{[}2\mbox{]} = \{470, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ac0915e80c1328c914974d8f1ebd7b8d6}{p65}} \mbox{[}2\mbox{]} = \{610, 530\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a5977888434d81a3871fc1965af84eda6}{p66}} \mbox{[}2\mbox{]} = \{360, 670\}
+\begin{DoxyCompactList}\small\item\em Roof Lines. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa9b67ebfc64baf2757fc85d03310309f}{p67}} \mbox{[}2\mbox{]} = \{440, 670\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a54005a183ce74e8b04eafdee591605e3}{p68}} \mbox{[}2\mbox{]} = \{480, 670\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_ae0fa2ed20e239bbab84395f1dc2ef126}{p69}} \mbox{[}2\mbox{]} = \{600, 670\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a913abc5bf634b81a1894d290fd6fb901}{p70}} \mbox{[}2\mbox{]} = \{640, 670\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a727da4b8111d22c907d54412cbe769c8}{p71}} \mbox{[}2\mbox{]} = \{720, 670\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a73104eeafd7bf8f1b455669c7b6a35c7}{p72}} \mbox{[}2\mbox{]} = \{485, 410\}
+\begin{DoxyCompactList}\small\item\em Circle Lines. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_af42ec33cfb89f72e9e73a2a54c94cb0c}{p73}} \mbox{[}2\mbox{]} = \{500, 410\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a76780e89e14627c1af60039bdc18be71}{p74}} \mbox{[}2\mbox{]} = \{580, 410\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a3c67e62781607ba6f6de417e279545b4}{p75}} \mbox{[}2\mbox{]} = \{595, 410\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_aa1423bff270ba79d1a984e9b040cf5b5}{p76}} \mbox{[}2\mbox{]} = \{540, 370\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7193abecb8b78011af6525300ab62e65}{p77}} \mbox{[}2\mbox{]} = \{518, 442\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7d074c3453679dd9034d3e2e072b4d47}{p78}} \mbox{[}2\mbox{]} = \{562, 442\}
+\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_abc44432e309c511fc5a1ecdae9b7155f}{center}} \mbox{[}2\mbox{]} = \{540, 410\}
+\begin{DoxyCompactList}\small\item\em Circles. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7a0b0f33d1d3a820325a517a0d840748}{radius}} = 40
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a19e024b00e35fb40ae6d8055b4653cd4}\label{_block-_c_01_scene_8cpp_a19e024b00e35fb40ae6d8055b4653cd4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!circlePlot@{circlePlot}}
+\index{circlePlot@{circlePlot}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{circlePlot()}{circlePlot()}}
+{\footnotesize\ttfamily void circle\+Plot (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Circle drawing subroutine. 
+
+This function only calculates the points for one half of a quadrant, and the rest parts are drawn exploiting the 8-\/line of symmetry of a circle. 
+\begin{DoxyParams}{Parameters}
+{\em x0} & Amount of x value by which the circle needs to be translated about its center. \\
+\hline
+{\em y0} & Amount of y value by which the circle needs to be translated about its center. \\
+\hline
+{\em r} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a8d12a62f6efc642f1933b0843ed415cb}\label{_block-_c_01_scene_8cpp_a8d12a62f6efc642f1933b0843ed415cb}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void draw\+Circle (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y,  }\item[{GLint}]{x0,  }\item[{GLint}]{y0 }\end{DoxyParamCaption})}
+
+
+
+Draws set of eight points for any given point in a circle. 
+
+As for drawing circle, 8-\/lines of symmetry can be used, so this function draws set of eight points for any given point. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point to be plotted. \\
+\hline
+{\em y} & The y coordinate of the point to be plotted. \\
+\hline
+{\em x0} & Amount of x value by which the circle needs to be translated about its center. \\
+\hline
+{\em y0} & Amount of y value by which the circle needs to be translated about its center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}\label{_block-_c_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!drawDot@{drawDot}}
+\index{drawDot@{drawDot}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawDot()}{drawDot()}}
+{\footnotesize\ttfamily void draw\+Dot (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y }\end{DoxyParamCaption})}
+
+
+
+Plots a point on the Open\+GL window based on the coordinates provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point to be plotted. \\
+\hline
+{\em y} & The y coordinate of the point to be plotted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a85b5e266e82597f163d78c38fdcf62e5}\label{_block-_c_01_scene_8cpp_a85b5e266e82597f163d78c38fdcf62e5}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!drawEllipse@{drawEllipse}}
+\index{drawEllipse@{drawEllipse}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawEllipse()}{drawEllipse()}}
+{\footnotesize\ttfamily void draw\+Ellipse (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{GLint}]{valx,  }\item[{GLint}]{valy }\end{DoxyParamCaption})}
+
+
+
+Ellipse drawing subroutine. 
+
+Draws one quarter of an ellipse and makes use of the 4-\/line of symmetry of ellipse, to draw the other three quadrants. 
+\begin{DoxyParams}{Parameters}
+{\em a} & Length of the major axis of the ellipse. \\
+\hline
+{\em n} & Length of the minor axis of the ellipse. \\
+\hline
+{\em valx} & Amount of x value by which the ellipse needs to be translated about its center. \\
+\hline
+{\em valy} & Amount of y value by which the ellipse needs to be translated about its center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a0728e87b4de6d4dd8dc825e347c2b0e0}\label{_block-_c_01_scene_8cpp_a0728e87b4de6d4dd8dc825e347c2b0e0}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!drawHalfCircle@{drawHalfCircle}}
+\index{drawHalfCircle@{drawHalfCircle}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawHalfCircle()}{drawHalfCircle()}}
+{\footnotesize\ttfamily void draw\+Half\+Circle (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y,  }\item[{GLint}]{x0,  }\item[{GLint}]{y0 }\end{DoxyParamCaption})}
+
+
+
+Draws set of four points for any given point in a semicircle. 
+
+As for drawing semicircle, 4-\/lines of symmetry can be used, so this function draws set of four points for any given point. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point to be plotted. \\
+\hline
+{\em y} & The y coordinate of the point to be plotted. \\
+\hline
+{\em x0} & Amount of x value by which the semicircle needs to be translated about its center. \\
+\hline
+{\em y0} & Amount of y value by which the semicircle needs to be translated about its center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}\label{_block-_c_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!drawPolygon@{drawPolygon}}
+\index{drawPolygon@{drawPolygon}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
+{\footnotesize\ttfamily void draw\+Polygon (\begin{DoxyParamCaption}\item[{const int}]{pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Plots the lines in a cyclic loop to create a polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Array of vertices of the polygon. \\
+\hline
+{\em n} & Number of points in the polygon. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7e456adc2e74c4359e87b3d32abfbe56}\label{_block-_c_01_scene_8cpp_a7e456adc2e74c4359e87b3d32abfbe56}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!halfcirclePlot@{halfcirclePlot}}
+\index{halfcirclePlot@{halfcirclePlot}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{halfcirclePlot()}{halfcirclePlot()}}
+{\footnotesize\ttfamily void halfcircle\+Plot (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Semi-\/circle drawing subroutine. 
+
+Draws the top half of the semicircle. This function only calculates the points for one half of a quadrant, and the rest parts are drawn using symmetry. 
+\begin{DoxyParams}{Parameters}
+{\em x0} & Amount of x value by which the semicircle needs to be translated about its center. \\
+\hline
+{\em y0} & Amount of y value by which the semicircle needs to be translated about its center. \\
+\hline
+{\em r} & The radius of the semicircle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}\label{_block-_c_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!lineplot@{lineplot}}
+\index{lineplot@{lineplot}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{lineplot()}{lineplot()}}
+{\footnotesize\ttfamily void lineplot (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Line drawing subroutine. 
+
+This is an implementation of Bresenham Line algorithm for any two points in a cartesian coordinate system. 
+\begin{DoxyParams}{Parameters}
+{\em x0} & The x coordinate of the starting point. \\
+\hline
+{\em y0} & The y coordinate of the starting point. \\
+\hline
+{\em x1} & The x coordinate of the end point. \\
+\hline
+{\em y1} & The y coordinate of the end point. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{_block-_c_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!main@{main}}
+\index{main@{main}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+The main function from where all the other functions are called. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The count of arguments passed. \\
+\hline
+{\em argv} & The argument list passed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}\label{_block-_c_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!myDisplay@{myDisplay}}
+\index{myDisplay@{myDisplay}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{myDisplay()}{myDisplay()}}
+{\footnotesize\ttfamily void my\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The my\+Display function calls all the other drawing subroutines. 
+
+All the things that would be displayed in the Open\+GL window, would be initiated from this function. \mbox{\Hypertarget{_block-_c_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}\label{_block-_c_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!myInit@{myInit}}
+\index{myInit@{myInit}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{myInit()}{myInit()}}
+{\footnotesize\ttfamily void my\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes several state variables of the Open\+GL system with appropriate values. 
+
+Background color is set to white. Drawing color is set to black. Point size is set to 2 pixels. The matrix mode is set to projection mode. \mbox{\Hypertarget{_block-_c_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}\label{_block-_c_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!swap@{swap}}
+\index{swap@{swap}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int \&}]{a,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Swaps two integer values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first value that needs to be swapped. \\
+\hline
+{\em b} & The second value that needs to be swapped. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_abc44432e309c511fc5a1ecdae9b7155f}\label{_block-_c_01_scene_8cpp_abc44432e309c511fc5a1ecdae9b7155f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!center@{center}}
+\index{center@{center}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily const int center\mbox{[}2\mbox{]} = \{540, 410\}}
+
+
+
+Circles. 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}\label{_block-_c_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!mode@{mode}}
+\index{mode@{mode}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily const int mode = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE}
+
+
+
+RGB color space is used along with single display buffer mode. 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7018294f34948f519a32172303f0db7b}\label{_block-_c_01_scene_8cpp_a7018294f34948f519a32172303f0db7b}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p0@{p0}}
+\index{p0@{p0}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p0}{p0}}
+{\footnotesize\ttfamily const int p0\mbox{[}2\mbox{]} = \{280, 40\}}
+
+
+
+walkway\+\_\+1 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab413d8607112729b0bddf1b78faba3d1}\label{_block-_c_01_scene_8cpp_ab413d8607112729b0bddf1b78faba3d1}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p1@{p1}}
+\index{p1@{p1}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily const int p1\mbox{[}2\mbox{]} = \{800, 40\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5591295b75966607f250a079b85b45d9}\label{_block-_c_01_scene_8cpp_a5591295b75966607f250a079b85b45d9}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p10@{p10}}
+\index{p10@{p10}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p10}{p10}}
+{\footnotesize\ttfamily const int p10\mbox{[}2\mbox{]} = \{200, 230\}}
+
+
+
+stairs left 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa1637a414fedb7835f85d144fea0a1d3}\label{_block-_c_01_scene_8cpp_aa1637a414fedb7835f85d144fea0a1d3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p11@{p11}}
+\index{p11@{p11}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p11}{p11}}
+{\footnotesize\ttfamily const int p11\mbox{[}2\mbox{]} = \{200, 350\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7e1aac29ed4b4497c556ed52c58a2eec}\label{_block-_c_01_scene_8cpp_a7e1aac29ed4b4497c556ed52c58a2eec}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p12@{p12}}
+\index{p12@{p12}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p12}{p12}}
+{\footnotesize\ttfamily const int p12\mbox{[}2\mbox{]} = \{880, 230\}}
+
+
+
+stairs right 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2aa2d5ebe063ff959ea843d888c0c16e}\label{_block-_c_01_scene_8cpp_a2aa2d5ebe063ff959ea843d888c0c16e}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p13@{p13}}
+\index{p13@{p13}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p13}{p13}}
+{\footnotesize\ttfamily const int p13\mbox{[}2\mbox{]} = \{880, 350\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2a1bafa8cfcdf067839bf39c05237194}\label{_block-_c_01_scene_8cpp_a2a1bafa8cfcdf067839bf39c05237194}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p14@{p14}}
+\index{p14@{p14}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p14}{p14}}
+{\footnotesize\ttfamily const int p14\mbox{[}2\mbox{]} = \{0, 350\}}
+
+
+
+platform 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a0d3e36afacf1dfaa053b44f582d9a71a}\label{_block-_c_01_scene_8cpp_a0d3e36afacf1dfaa053b44f582d9a71a}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p15@{p15}}
+\index{p15@{p15}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p15}{p15}}
+{\footnotesize\ttfamily const int p15\mbox{[}2\mbox{]} = \{1080, 350\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac089bf4217b32022210ff283b38cd845}\label{_block-_c_01_scene_8cpp_ac089bf4217b32022210ff283b38cd845}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p16@{p16}}
+\index{p16@{p16}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p16}{p16}}
+{\footnotesize\ttfamily const int p16\mbox{[}2\mbox{]} = \{0, 480\}}
+
+
+
+mid\+\_\+1 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5428daceea6e299bf51c2e2163a393b6}\label{_block-_c_01_scene_8cpp_a5428daceea6e299bf51c2e2163a393b6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p17@{p17}}
+\index{p17@{p17}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p17}{p17}}
+{\footnotesize\ttfamily const int p17\mbox{[}2\mbox{]} = \{1080, 480\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5e1be1417c171a0812eacdb292e91e1c}\label{_block-_c_01_scene_8cpp_a5e1be1417c171a0812eacdb292e91e1c}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p18@{p18}}
+\index{p18@{p18}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p18}{p18}}
+{\footnotesize\ttfamily const int p18\mbox{[}2\mbox{]} = \{240, 480\}}
+
+
+
+mid\+\_\+2 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a636051b8f2a401cf57f040a4d2a2eda4}\label{_block-_c_01_scene_8cpp_a636051b8f2a401cf57f040a4d2a2eda4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p19@{p19}}
+\index{p19@{p19}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p19}{p19}}
+{\footnotesize\ttfamily const int p19\mbox{[}2\mbox{]} = \{240, 350\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a646afb516d1230300c4f38e0253dd335}\label{_block-_c_01_scene_8cpp_a646afb516d1230300c4f38e0253dd335}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p2@{p2}}
+\index{p2@{p2}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily const int p2\mbox{[}2\mbox{]} = \{288, 80\}}
+
+
+
+walkway\+\_\+2 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa326e29d0401d229e4b009d5d56cdad4}\label{_block-_c_01_scene_8cpp_aa326e29d0401d229e4b009d5d56cdad4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p20@{p20}}
+\index{p20@{p20}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p20}{p20}}
+{\footnotesize\ttfamily const int p20\mbox{[}2\mbox{]} = \{840, 480\}}
+
+
+
+mid\+\_\+3 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5e7996bcbd53a71a633a21f3a8068ea6}\label{_block-_c_01_scene_8cpp_a5e7996bcbd53a71a633a21f3a8068ea6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p21@{p21}}
+\index{p21@{p21}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p21}{p21}}
+{\footnotesize\ttfamily const int p21\mbox{[}2\mbox{]} = \{840, 350\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a55ed85e80dd21be6761a3c5af461fa20}\label{_block-_c_01_scene_8cpp_a55ed85e80dd21be6761a3c5af461fa20}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p22@{p22}}
+\index{p22@{p22}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p22}{p22}}
+{\footnotesize\ttfamily const int p22\mbox{[}2\mbox{]} = \{0, 620\}}
+
+
+
+top left 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7da9d9f597383396eb8bd580550bd730}\label{_block-_c_01_scene_8cpp_a7da9d9f597383396eb8bd580550bd730}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p23@{p23}}
+\index{p23@{p23}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p23}{p23}}
+{\footnotesize\ttfamily const int p23\mbox{[}2\mbox{]} = \{80, 600\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_acc95d1e7f8f1b1eea27d11136da3d702}\label{_block-_c_01_scene_8cpp_acc95d1e7f8f1b1eea27d11136da3d702}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p24@{p24}}
+\index{p24@{p24}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p24}{p24}}
+{\footnotesize\ttfamily const int p24\mbox{[}2\mbox{]} = \{80, 480\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a86a9d7a3b04f6f3cde2731a7804bc9bc}\label{_block-_c_01_scene_8cpp_a86a9d7a3b04f6f3cde2731a7804bc9bc}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p25@{p25}}
+\index{p25@{p25}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p25}{p25}}
+{\footnotesize\ttfamily const int p25\mbox{[}2\mbox{]} = \{280, 600\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a69b035092855cc14f74ee05517450d12}\label{_block-_c_01_scene_8cpp_a69b035092855cc14f74ee05517450d12}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p26@{p26}}
+\index{p26@{p26}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p26}{p26}}
+{\footnotesize\ttfamily const int p26\mbox{[}2\mbox{]} = \{1080, 620\}}
+
+
+
+top right 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ae8c4fbc03056001b39ddb332d165fb4a}\label{_block-_c_01_scene_8cpp_ae8c4fbc03056001b39ddb332d165fb4a}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p27@{p27}}
+\index{p27@{p27}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p27}{p27}}
+{\footnotesize\ttfamily const int p27\mbox{[}2\mbox{]} = \{1000, 600\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5f391dc5aeaedfb83ad88e488cca41dd}\label{_block-_c_01_scene_8cpp_a5f391dc5aeaedfb83ad88e488cca41dd}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p28@{p28}}
+\index{p28@{p28}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p28}{p28}}
+{\footnotesize\ttfamily const int p28\mbox{[}2\mbox{]} = \{1000, 480\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab76c40d590b7096114c6ddd8bff6d877}\label{_block-_c_01_scene_8cpp_ab76c40d590b7096114c6ddd8bff6d877}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p29@{p29}}
+\index{p29@{p29}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p29}{p29}}
+{\footnotesize\ttfamily const int p29\mbox{[}2\mbox{]} = \{800, 600\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_adc3c8dd2a1ad88dbe00babe0128435a0}\label{_block-_c_01_scene_8cpp_adc3c8dd2a1ad88dbe00babe0128435a0}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p3@{p3}}
+\index{p3@{p3}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p3}{p3}}
+{\footnotesize\ttfamily const int p3\mbox{[}2\mbox{]} = \{788, 80\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a60c1688d1ba6e3d512e5724abecccd99}\label{_block-_c_01_scene_8cpp_a60c1688d1ba6e3d512e5724abecccd99}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p30@{p30}}
+\index{p30@{p30}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p30}{p30}}
+{\footnotesize\ttfamily const int p30\mbox{[}2\mbox{]} = \{160, 520\}}
+
+
+
+window lines 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a419d6edbe2c9d72126da601dd9cecc01}\label{_block-_c_01_scene_8cpp_a419d6edbe2c9d72126da601dd9cecc01}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p31@{p31}}
+\index{p31@{p31}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p31}{p31}}
+{\footnotesize\ttfamily const int p31\mbox{[}2\mbox{]} = \{160, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a3cfd8cb20ad3be12df9854d9bccd428e}\label{_block-_c_01_scene_8cpp_a3cfd8cb20ad3be12df9854d9bccd428e}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p32@{p32}}
+\index{p32@{p32}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p32}{p32}}
+{\footnotesize\ttfamily const int p32\mbox{[}2\mbox{]} = \{200, 520\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab874710d44a141c5753235a5dfcdbb51}\label{_block-_c_01_scene_8cpp_ab874710d44a141c5753235a5dfcdbb51}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p33@{p33}}
+\index{p33@{p33}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p33}{p33}}
+{\footnotesize\ttfamily const int p33\mbox{[}2\mbox{]} = \{200, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a856a950893d54f0fb4e034a389c484d3}\label{_block-_c_01_scene_8cpp_a856a950893d54f0fb4e034a389c484d3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p34@{p34}}
+\index{p34@{p34}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p34}{p34}}
+{\footnotesize\ttfamily const int p34\mbox{[}2\mbox{]} = \{920, 520\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa046eaa60a49bad7ae423043beaae744}\label{_block-_c_01_scene_8cpp_aa046eaa60a49bad7ae423043beaae744}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p35@{p35}}
+\index{p35@{p35}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p35}{p35}}
+{\footnotesize\ttfamily const int p35\mbox{[}2\mbox{]} = \{920, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aac602b7a2b1934c9589c45fa68e2559f}\label{_block-_c_01_scene_8cpp_aac602b7a2b1934c9589c45fa68e2559f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p36@{p36}}
+\index{p36@{p36}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p36}{p36}}
+{\footnotesize\ttfamily const int p36\mbox{[}2\mbox{]} = \{880, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_af6a2d07b7150ae796027f34648e94474}\label{_block-_c_01_scene_8cpp_af6a2d07b7150ae796027f34648e94474}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p37@{p37}}
+\index{p37@{p37}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p37}{p37}}
+{\footnotesize\ttfamily const int p37\mbox{[}2\mbox{]} = \{880, 520\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a6fdf297c4bfbb2c3ed682616cbde40a3}\label{_block-_c_01_scene_8cpp_a6fdf297c4bfbb2c3ed682616cbde40a3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p38@{p38}}
+\index{p38@{p38}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p38}{p38}}
+{\footnotesize\ttfamily const int p38\mbox{[}2\mbox{]} = \{350, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a71f783f5c4d3dd814d599f597b685bf6}\label{_block-_c_01_scene_8cpp_a71f783f5c4d3dd814d599f597b685bf6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p39@{p39}}
+\index{p39@{p39}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p39}{p39}}
+{\footnotesize\ttfamily const int p39\mbox{[}2\mbox{]} = \{350, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a4539245dbd71ad2757678ca4cfd583c9}\label{_block-_c_01_scene_8cpp_a4539245dbd71ad2757678ca4cfd583c9}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p4@{p4}}
+\index{p4@{p4}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p4}{p4}}
+{\footnotesize\ttfamily const int p4\mbox{[}2\mbox{]} = \{294, 120\}}
+
+
+
+walkway\+\_\+3 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2cd9ad4ad4786daeace0d39578a76629}\label{_block-_c_01_scene_8cpp_a2cd9ad4ad4786daeace0d39578a76629}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p40@{p40}}
+\index{p40@{p40}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p40}{p40}}
+{\footnotesize\ttfamily const int p40\mbox{[}2\mbox{]} = \{380, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a07d22f06a07e399c2a01e8c9449ba239}\label{_block-_c_01_scene_8cpp_a07d22f06a07e399c2a01e8c9449ba239}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p41@{p41}}
+\index{p41@{p41}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p41}{p41}}
+{\footnotesize\ttfamily const int p41\mbox{[}2\mbox{]} = \{380, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac11d5bf58c751828c2ac9d22bea817d4}\label{_block-_c_01_scene_8cpp_ac11d5bf58c751828c2ac9d22bea817d4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p42@{p42}}
+\index{p42@{p42}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p42}{p42}}
+{\footnotesize\ttfamily const int p42\mbox{[}2\mbox{]} = \{320, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a277828cfa8b882c8530f9bce7f8ea4d4}\label{_block-_c_01_scene_8cpp_a277828cfa8b882c8530f9bce7f8ea4d4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p43@{p43}}
+\index{p43@{p43}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p43}{p43}}
+{\footnotesize\ttfamily const int p43\mbox{[}2\mbox{]} = \{410, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a264c356c222ffbeaf4c1eabe30137a39}\label{_block-_c_01_scene_8cpp_a264c356c222ffbeaf4c1eabe30137a39}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p44@{p44}}
+\index{p44@{p44}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p44}{p44}}
+{\footnotesize\ttfamily const int p44\mbox{[}2\mbox{]} = \{320, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a02f66bb54fb85a582e9a854c06f0ef1d}\label{_block-_c_01_scene_8cpp_a02f66bb54fb85a582e9a854c06f0ef1d}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p45@{p45}}
+\index{p45@{p45}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p45}{p45}}
+{\footnotesize\ttfamily const int p45\mbox{[}2\mbox{]} = \{410, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2df4fe8c969357805bc5c95a4dc351af}\label{_block-_c_01_scene_8cpp_a2df4fe8c969357805bc5c95a4dc351af}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p46@{p46}}
+\index{p46@{p46}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p46}{p46}}
+{\footnotesize\ttfamily const int p46\mbox{[}2\mbox{]} = \{700, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aeb83cd60fdaa39b59387656f13664b03}\label{_block-_c_01_scene_8cpp_aeb83cd60fdaa39b59387656f13664b03}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p47@{p47}}
+\index{p47@{p47}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p47}{p47}}
+{\footnotesize\ttfamily const int p47\mbox{[}2\mbox{]} = \{700, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab6b0747c628938f3a1fc4058f087cb49}\label{_block-_c_01_scene_8cpp_ab6b0747c628938f3a1fc4058f087cb49}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p48@{p48}}
+\index{p48@{p48}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p48}{p48}}
+{\footnotesize\ttfamily const int p48\mbox{[}2\mbox{]} = \{730, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a232cec14705c8205d0f3dea3c6f959a5}\label{_block-_c_01_scene_8cpp_a232cec14705c8205d0f3dea3c6f959a5}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p49@{p49}}
+\index{p49@{p49}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p49}{p49}}
+{\footnotesize\ttfamily const int p49\mbox{[}2\mbox{]} = \{730, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac9efdee756bc435e3545194321c20fbd}\label{_block-_c_01_scene_8cpp_ac9efdee756bc435e3545194321c20fbd}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p5@{p5}}
+\index{p5@{p5}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p5}{p5}}
+{\footnotesize\ttfamily const int p5\mbox{[}2\mbox{]} = \{780, 120\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a0350b16249e70759ea71a28a4f8cfc2f}\label{_block-_c_01_scene_8cpp_a0350b16249e70759ea71a28a4f8cfc2f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p50@{p50}}
+\index{p50@{p50}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p50}{p50}}
+{\footnotesize\ttfamily const int p50\mbox{[}2\mbox{]} = \{670, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_acf89a4d1d8b24e4de58d76c154cb777a}\label{_block-_c_01_scene_8cpp_acf89a4d1d8b24e4de58d76c154cb777a}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p51@{p51}}
+\index{p51@{p51}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p51}{p51}}
+{\footnotesize\ttfamily const int p51\mbox{[}2\mbox{]} = \{760, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab9a53b93b8602761343c0169db908580}\label{_block-_c_01_scene_8cpp_ab9a53b93b8602761343c0169db908580}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p52@{p52}}
+\index{p52@{p52}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p52}{p52}}
+{\footnotesize\ttfamily const int p52\mbox{[}2\mbox{]} = \{670, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_afae7de8414f807cc6e6741eae6dc4836}\label{_block-_c_01_scene_8cpp_afae7de8414f807cc6e6741eae6dc4836}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p53@{p53}}
+\index{p53@{p53}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p53}{p53}}
+{\footnotesize\ttfamily const int p53\mbox{[}2\mbox{]} = \{760, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a255a2fb7f3644f9c72f23cab791956a1}\label{_block-_c_01_scene_8cpp_a255a2fb7f3644f9c72f23cab791956a1}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p54@{p54}}
+\index{p54@{p54}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p54}{p54}}
+{\footnotesize\ttfamily const int p54\mbox{[}2\mbox{]} = \{490, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_af1377a631428f17e502c12c7cbf358d3}\label{_block-_c_01_scene_8cpp_af1377a631428f17e502c12c7cbf358d3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p55@{p55}}
+\index{p55@{p55}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p55}{p55}}
+{\footnotesize\ttfamily const int p55\mbox{[}2\mbox{]} = \{490, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2891dbda6af849c48cbde0c918765b81}\label{_block-_c_01_scene_8cpp_a2891dbda6af849c48cbde0c918765b81}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p56@{p56}}
+\index{p56@{p56}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p56}{p56}}
+{\footnotesize\ttfamily const int p56\mbox{[}2\mbox{]} = \{520, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a34f8d4e1a4e1582e2d397f309d046734}\label{_block-_c_01_scene_8cpp_a34f8d4e1a4e1582e2d397f309d046734}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p57@{p57}}
+\index{p57@{p57}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p57}{p57}}
+{\footnotesize\ttfamily const int p57\mbox{[}2\mbox{]} = \{520, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_acf40eefe86f7ac9f33ea6ce7bbb4b281}\label{_block-_c_01_scene_8cpp_acf40eefe86f7ac9f33ea6ce7bbb4b281}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p58@{p58}}
+\index{p58@{p58}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p58}{p58}}
+{\footnotesize\ttfamily const int p58\mbox{[}2\mbox{]} = \{560, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a8d3aeb91c8306078d1830d28535c51c7}\label{_block-_c_01_scene_8cpp_a8d3aeb91c8306078d1830d28535c51c7}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p59@{p59}}
+\index{p59@{p59}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p59}{p59}}
+{\footnotesize\ttfamily const int p59\mbox{[}2\mbox{]} = \{560, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a0cf979bfad10887cba48c38a31fd853d}\label{_block-_c_01_scene_8cpp_a0cf979bfad10887cba48c38a31fd853d}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p6@{p6}}
+\index{p6@{p6}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p6}{p6}}
+{\footnotesize\ttfamily const int p6\mbox{[}2\mbox{]} = \{170, 190\}}
+
+
+
+stairs bottom\+\_\+1 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a0d32a8e8289500a2948186c570faa763}\label{_block-_c_01_scene_8cpp_a0d32a8e8289500a2948186c570faa763}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p60@{p60}}
+\index{p60@{p60}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p60}{p60}}
+{\footnotesize\ttfamily const int p60\mbox{[}2\mbox{]} = \{590, 590\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_af147f0e22ecf6a41b7be1d37c2ae0e8c}\label{_block-_c_01_scene_8cpp_af147f0e22ecf6a41b7be1d37c2ae0e8c}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p61@{p61}}
+\index{p61@{p61}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p61}{p61}}
+{\footnotesize\ttfamily const int p61\mbox{[}2\mbox{]} = \{590, 500\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a3f571ec0cd312ba5c271912597ae6ec8}\label{_block-_c_01_scene_8cpp_a3f571ec0cd312ba5c271912597ae6ec8}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p62@{p62}}
+\index{p62@{p62}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p62}{p62}}
+{\footnotesize\ttfamily const int p62\mbox{[}2\mbox{]} = \{470, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a72067294239f1bd456afc9e8cb60178b}\label{_block-_c_01_scene_8cpp_a72067294239f1bd456afc9e8cb60178b}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p63@{p63}}
+\index{p63@{p63}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p63}{p63}}
+{\footnotesize\ttfamily const int p63\mbox{[}2\mbox{]} = \{610, 560\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a53f29019388f0d1f1040157c8ad8b6d3}\label{_block-_c_01_scene_8cpp_a53f29019388f0d1f1040157c8ad8b6d3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p64@{p64}}
+\index{p64@{p64}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p64}{p64}}
+{\footnotesize\ttfamily const int p64\mbox{[}2\mbox{]} = \{470, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac0915e80c1328c914974d8f1ebd7b8d6}\label{_block-_c_01_scene_8cpp_ac0915e80c1328c914974d8f1ebd7b8d6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p65@{p65}}
+\index{p65@{p65}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p65}{p65}}
+{\footnotesize\ttfamily const int p65\mbox{[}2\mbox{]} = \{610, 530\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5977888434d81a3871fc1965af84eda6}\label{_block-_c_01_scene_8cpp_a5977888434d81a3871fc1965af84eda6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p66@{p66}}
+\index{p66@{p66}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p66}{p66}}
+{\footnotesize\ttfamily const int p66\mbox{[}2\mbox{]} = \{360, 670\}}
+
+
+
+Roof Lines. 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa9b67ebfc64baf2757fc85d03310309f}\label{_block-_c_01_scene_8cpp_aa9b67ebfc64baf2757fc85d03310309f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p67@{p67}}
+\index{p67@{p67}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p67}{p67}}
+{\footnotesize\ttfamily const int p67\mbox{[}2\mbox{]} = \{440, 670\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a54005a183ce74e8b04eafdee591605e3}\label{_block-_c_01_scene_8cpp_a54005a183ce74e8b04eafdee591605e3}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p68@{p68}}
+\index{p68@{p68}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p68}{p68}}
+{\footnotesize\ttfamily const int p68\mbox{[}2\mbox{]} = \{480, 670\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ae0fa2ed20e239bbab84395f1dc2ef126}\label{_block-_c_01_scene_8cpp_ae0fa2ed20e239bbab84395f1dc2ef126}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p69@{p69}}
+\index{p69@{p69}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p69}{p69}}
+{\footnotesize\ttfamily const int p69\mbox{[}2\mbox{]} = \{600, 670\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_afccfdf4c544b8d901cb76c2499e8484a}\label{_block-_c_01_scene_8cpp_afccfdf4c544b8d901cb76c2499e8484a}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p7@{p7}}
+\index{p7@{p7}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p7}{p7}}
+{\footnotesize\ttfamily const int p7\mbox{[}2\mbox{]} = \{910, 190\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a913abc5bf634b81a1894d290fd6fb901}\label{_block-_c_01_scene_8cpp_a913abc5bf634b81a1894d290fd6fb901}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p70@{p70}}
+\index{p70@{p70}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p70}{p70}}
+{\footnotesize\ttfamily const int p70\mbox{[}2\mbox{]} = \{640, 670\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a727da4b8111d22c907d54412cbe769c8}\label{_block-_c_01_scene_8cpp_a727da4b8111d22c907d54412cbe769c8}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p71@{p71}}
+\index{p71@{p71}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p71}{p71}}
+{\footnotesize\ttfamily const int p71\mbox{[}2\mbox{]} = \{720, 670\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a73104eeafd7bf8f1b455669c7b6a35c7}\label{_block-_c_01_scene_8cpp_a73104eeafd7bf8f1b455669c7b6a35c7}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p72@{p72}}
+\index{p72@{p72}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p72}{p72}}
+{\footnotesize\ttfamily const int p72\mbox{[}2\mbox{]} = \{485, 410\}}
+
+
+
+Circle Lines. 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_af42ec33cfb89f72e9e73a2a54c94cb0c}\label{_block-_c_01_scene_8cpp_af42ec33cfb89f72e9e73a2a54c94cb0c}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p73@{p73}}
+\index{p73@{p73}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p73}{p73}}
+{\footnotesize\ttfamily const int p73\mbox{[}2\mbox{]} = \{500, 410\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a76780e89e14627c1af60039bdc18be71}\label{_block-_c_01_scene_8cpp_a76780e89e14627c1af60039bdc18be71}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p74@{p74}}
+\index{p74@{p74}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p74}{p74}}
+{\footnotesize\ttfamily const int p74\mbox{[}2\mbox{]} = \{580, 410\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a3c67e62781607ba6f6de417e279545b4}\label{_block-_c_01_scene_8cpp_a3c67e62781607ba6f6de417e279545b4}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p75@{p75}}
+\index{p75@{p75}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p75}{p75}}
+{\footnotesize\ttfamily const int p75\mbox{[}2\mbox{]} = \{595, 410\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aa1423bff270ba79d1a984e9b040cf5b5}\label{_block-_c_01_scene_8cpp_aa1423bff270ba79d1a984e9b040cf5b5}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p76@{p76}}
+\index{p76@{p76}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p76}{p76}}
+{\footnotesize\ttfamily const int p76\mbox{[}2\mbox{]} = \{540, 370\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7193abecb8b78011af6525300ab62e65}\label{_block-_c_01_scene_8cpp_a7193abecb8b78011af6525300ab62e65}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p77@{p77}}
+\index{p77@{p77}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p77}{p77}}
+{\footnotesize\ttfamily const int p77\mbox{[}2\mbox{]} = \{518, 442\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7d074c3453679dd9034d3e2e072b4d47}\label{_block-_c_01_scene_8cpp_a7d074c3453679dd9034d3e2e072b4d47}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p78@{p78}}
+\index{p78@{p78}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p78}{p78}}
+{\footnotesize\ttfamily const int p78\mbox{[}2\mbox{]} = \{562, 442\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a20592623ef92571bd21627c7dddad0cb}\label{_block-_c_01_scene_8cpp_a20592623ef92571bd21627c7dddad0cb}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p8@{p8}}
+\index{p8@{p8}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p8}{p8}}
+{\footnotesize\ttfamily const int p8\mbox{[}2\mbox{]} = \{200, 230\}}
+
+
+
+stairs bottom\+\_\+2 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a9945ba54d0077834701661f20a14dce1}\label{_block-_c_01_scene_8cpp_a9945ba54d0077834701661f20a14dce1}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!p9@{p9}}
+\index{p9@{p9}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{p9}{p9}}
+{\footnotesize\ttfamily const int p9\mbox{[}2\mbox{]} = \{880, 230\}}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}\label{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts@{pts}}
+\index{pts@{pts}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts}{pts}}
+{\footnotesize\ttfamily const int pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{0, 0\},}
+\DoxyCodeLine{    \{270, 0\},}
+\DoxyCodeLine{    \{300, 150\},}
+\DoxyCodeLine{    \{0, 150\}\}}
+
+\end{DoxyCode}
+
+
+left bottom 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a06c824de48022d31ebf66e889d967185}\label{_block-_c_01_scene_8cpp_a06c824de48022d31ebf66e889d967185}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts1@{pts1}}
+\index{pts1@{pts1}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts1}{pts1}}
+{\footnotesize\ttfamily const int pts1\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{810, 0\},}
+\DoxyCodeLine{    \{1080, 0\},}
+\DoxyCodeLine{    \{1080, 150\},}
+\DoxyCodeLine{    \{770, 150\}\}}
+
+\end{DoxyCode}
+
+
+right bottom 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a2d160fec321ddf760b9bdb36cfbb96ee}\label{_block-_c_01_scene_8cpp_a2d160fec321ddf760b9bdb36cfbb96ee}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts10@{pts10}}
+\index{pts10@{pts10}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts10}{pts10}}
+{\footnotesize\ttfamily const int pts10\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{470, 500\},}
+\DoxyCodeLine{    \{470, 590\},}
+\DoxyCodeLine{    \{610, 590\},}
+\DoxyCodeLine{    \{610, 500\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a083fd14fba996058a5532a14caf3a804}\label{_block-_c_01_scene_8cpp_a083fd14fba996058a5532a14caf3a804}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts11@{pts11}}
+\index{pts11@{pts11}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts11}{pts11}}
+{\footnotesize\ttfamily const int pts11\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{660, 490\},}
+\DoxyCodeLine{    \{660, 600\},}
+\DoxyCodeLine{    \{770, 600\},}
+\DoxyCodeLine{    \{770, 490\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5ab746acd10123f21a6c05242a33763a}\label{_block-_c_01_scene_8cpp_a5ab746acd10123f21a6c05242a33763a}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts12@{pts12}}
+\index{pts12@{pts12}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts12}{pts12}}
+{\footnotesize\ttfamily const int pts12\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{670, 500\},}
+\DoxyCodeLine{    \{670, 590\},}
+\DoxyCodeLine{    \{760, 590\},}
+\DoxyCodeLine{    \{760, 500\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a42661df27a7ce3837ffdf19b517eccaa}\label{_block-_c_01_scene_8cpp_a42661df27a7ce3837ffdf19b517eccaa}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts13@{pts13}}
+\index{pts13@{pts13}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts13}{pts13}}
+{\footnotesize\ttfamily const int pts13\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{120, 520\},}
+\DoxyCodeLine{    \{120, 560\},}
+\DoxyCodeLine{    \{240, 560\},}
+\DoxyCodeLine{    \{240, 520\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_abb1a25530c6e2fa097421b03b96e4056}\label{_block-_c_01_scene_8cpp_abb1a25530c6e2fa097421b03b96e4056}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts14@{pts14}}
+\index{pts14@{pts14}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts14}{pts14}}
+{\footnotesize\ttfamily const int pts14\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{840, 520\},}
+\DoxyCodeLine{    \{840, 560\},}
+\DoxyCodeLine{    \{960, 560\},}
+\DoxyCodeLine{    \{960, 520\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab49da7ea6ed2ced924d406e154660b4f}\label{_block-_c_01_scene_8cpp_ab49da7ea6ed2ced924d406e154660b4f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts15@{pts15}}
+\index{pts15@{pts15}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts15}{pts15}}
+{\footnotesize\ttfamily const int pts15\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{320, 620\},}
+\DoxyCodeLine{    \{320, 680\},}
+\DoxyCodeLine{    \{360, 680\},}
+\DoxyCodeLine{    \{360, 620\},}
+\DoxyCodeLine{    \{440, 620\},}
+\DoxyCodeLine{    \{440, 680\},}
+\DoxyCodeLine{    \{480, 680\},}
+\DoxyCodeLine{    \{480, 620\},}
+\DoxyCodeLine{    \{600, 620\},}
+\DoxyCodeLine{    \{600, 680\},}
+\DoxyCodeLine{    \{640, 680\},}
+\DoxyCodeLine{    \{640, 620\},}
+\DoxyCodeLine{    \{720, 620\},}
+\DoxyCodeLine{    \{720, 680\},}
+\DoxyCodeLine{    \{760, 680\},}
+\DoxyCodeLine{    \{760, 620\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a882ce37d577fb6fe51910fb22a1899d8}\label{_block-_c_01_scene_8cpp_a882ce37d577fb6fe51910fb22a1899d8}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts2@{pts2}}
+\index{pts2@{pts2}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts2}{pts2}}
+{\footnotesize\ttfamily const int pts2\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{-\/40, 200\},}
+\DoxyCodeLine{    \{170, 190\},}
+\DoxyCodeLine{    \{170, 220\},}
+\DoxyCodeLine{    \{-\/40, 230\},}
+\DoxyCodeLine{    \{-\/30, 250\},}
+\DoxyCodeLine{    \{180, 240\},}
+\DoxyCodeLine{    \{180, 270\},}
+\DoxyCodeLine{    \{-\/30, 280\},}
+\DoxyCodeLine{    \{-\/20, 300\},}
+\DoxyCodeLine{    \{190, 290\},}
+\DoxyCodeLine{    \{190, 320\},}
+\DoxyCodeLine{    \{-\/20, 330\},}
+\DoxyCodeLine{    \{0, 350\}\}}
+
+\end{DoxyCode}
+
+
+left stairs\+\_\+1 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5776ab5d1980e16d9c11250f385d0095}\label{_block-_c_01_scene_8cpp_a5776ab5d1980e16d9c11250f385d0095}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts3@{pts3}}
+\index{pts3@{pts3}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts3}{pts3}}
+{\footnotesize\ttfamily const int pts3\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{200, 350\},}
+\DoxyCodeLine{    \{200, 230\},}
+\DoxyCodeLine{    \{170, 190\},}
+\DoxyCodeLine{    \{170, 220\},}
+\DoxyCodeLine{    \{180, 240\},}
+\DoxyCodeLine{    \{180, 270\},}
+\DoxyCodeLine{    \{190, 290\},}
+\DoxyCodeLine{    \{190, 320\},}
+\DoxyCodeLine{    \{200, 340\}\}}
+
+\end{DoxyCode}
+
+
+left stairs\+\_\+2 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ac02cb05500d7f53bf2d73280cf1bcc61}\label{_block-_c_01_scene_8cpp_ac02cb05500d7f53bf2d73280cf1bcc61}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts4@{pts4}}
+\index{pts4@{pts4}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts4}{pts4}}
+{\footnotesize\ttfamily const int pts4\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{1120, 200\},}
+\DoxyCodeLine{    \{910, 190\},}
+\DoxyCodeLine{    \{910, 220\},}
+\DoxyCodeLine{    \{1120, 230\},}
+\DoxyCodeLine{    \{1110, 250\},}
+\DoxyCodeLine{    \{900, 240\},}
+\DoxyCodeLine{    \{900, 270\},}
+\DoxyCodeLine{    \{1110, 280\},}
+\DoxyCodeLine{    \{1100, 300\},}
+\DoxyCodeLine{    \{890, 290\},}
+\DoxyCodeLine{    \{890, 320\},}
+\DoxyCodeLine{    \{1100, 330\},}
+\DoxyCodeLine{    \{1080, 350\}\}}
+
+\end{DoxyCode}
+
+
+right stairs\+\_\+1 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a4b71d13dba6a27e1f24b0dad62aeb528}\label{_block-_c_01_scene_8cpp_a4b71d13dba6a27e1f24b0dad62aeb528}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts5@{pts5}}
+\index{pts5@{pts5}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts5}{pts5}}
+{\footnotesize\ttfamily const int pts5\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{880, 350\},}
+\DoxyCodeLine{    \{880, 230\},}
+\DoxyCodeLine{    \{910, 190\},}
+\DoxyCodeLine{    \{910, 220\},}
+\DoxyCodeLine{    \{900, 240\},}
+\DoxyCodeLine{    \{900, 270\},}
+\DoxyCodeLine{    \{890, 290\},}
+\DoxyCodeLine{    \{890, 320\},}
+\DoxyCodeLine{    \{880, 340\}\}}
+
+\end{DoxyCode}
+
+
+right stairs\+\_\+2 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_ab612cc464a40094c107eb79a6c0e43b1}\label{_block-_c_01_scene_8cpp_ab612cc464a40094c107eb79a6c0e43b1}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts6@{pts6}}
+\index{pts6@{pts6}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts6}{pts6}}
+{\footnotesize\ttfamily const int pts6\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{280, 480\},}
+\DoxyCodeLine{    \{280, 620\},}
+\DoxyCodeLine{    \{800, 620\},}
+\DoxyCodeLine{    \{800, 480\}\}}
+
+\end{DoxyCode}
+
+
+top\+\_\+mid 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_adc2fc1e858ec6801b1c90e3aa946746f}\label{_block-_c_01_scene_8cpp_adc2fc1e858ec6801b1c90e3aa946746f}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts7@{pts7}}
+\index{pts7@{pts7}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts7}{pts7}}
+{\footnotesize\ttfamily const int pts7\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{310, 490\},}
+\DoxyCodeLine{    \{310, 600\},}
+\DoxyCodeLine{    \{420, 600\},}
+\DoxyCodeLine{    \{420, 490\}\}}
+
+\end{DoxyCode}
+
+
+windows 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a5ba5695bd2706e408a544f4167211aac}\label{_block-_c_01_scene_8cpp_a5ba5695bd2706e408a544f4167211aac}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts8@{pts8}}
+\index{pts8@{pts8}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts8}{pts8}}
+{\footnotesize\ttfamily const int pts8\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{320, 500\},}
+\DoxyCodeLine{    \{320, 590\},}
+\DoxyCodeLine{    \{410, 590\},}
+\DoxyCodeLine{    \{410, 500\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_aadc82009f9f893cc4431980dc8819c6b}\label{_block-_c_01_scene_8cpp_aadc82009f9f893cc4431980dc8819c6b}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!pts9@{pts9}}
+\index{pts9@{pts9}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pts9}{pts9}}
+{\footnotesize\ttfamily const int pts9\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{460, 490\},}
+\DoxyCodeLine{    \{460, 600\},}
+\DoxyCodeLine{    \{620, 600\},}
+\DoxyCodeLine{    \{620, 490\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7a0b0f33d1d3a820325a517a0d840748}\label{_block-_c_01_scene_8cpp_a7a0b0f33d1d3a820325a517a0d840748}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!radius@{radius}}
+\index{radius@{radius}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily const int radius = 40}
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}\label{_block-_c_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily const int screen\+Height = 760}
+
+
+
+Height of the Open\+GL screen output. 
+
+\mbox{\Hypertarget{_block-_c_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}\label{_block-_c_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}} 
+\index{Block-\/C Scene.cpp@{Block-\/C Scene.cpp}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!Block-\/C Scene.cpp@{Block-\/C Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily const int screen\+Width = 1080}
+
+
+
+Width of the Open\+GL screen output. 
+

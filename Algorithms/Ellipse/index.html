@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Ellipse Drawing - CG Assignment</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ellipse Drawing";
+        var mkdocs_page_input_path = "Algorithms\\Ellipse.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> CG Assignment
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Story and Screenplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../OpenGL/">OpenGL Instantiations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms in OpenGL</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Circle/">Circle Drawing</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Ellipse Drawing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Polygon/">Line and Polygon Drawing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Making the storyboard</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Scenes/">Methodology of Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Together/">Putting the panel together</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../doxygen/html/">Deep dive into the code</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">CG Assignment</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Algorithms in OpenGL &raquo;</li>
+      <li>Ellipse Drawing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ellipse-drawing-algorithm">Ellipse drawing algorithm</h1>
+<h2 id="description">Description</h2>
+<p>The Midpoint Drawing algorithm was again used to draw ellipses. Since they have a 4-way symmetry, only one of the quadrants were required to be computed, which were then further divided into 2 regions, one where |slope| was less than 1 and the other where it was greater. All the ellipses that we required for the scene only had their upper halves and as such, the points were only duplicated wrt. the y-axis.</p>
+<p>The final routine takes in a and b, the lengths of the ellipse’s axes and its center as integer arguments.</p>
+<h2 id="implementation">Implementation</h2>
+<pre><code>void drawEllipse(int a, int b, GLint valx, GLint valy){
+    double d2;
+    int x = 0;
+    int y = b;
+    double d1 = (b*b) - (a*a*b) + (0.25*a*a);
+
+    //plot point
+    glVertex2i(x + valx, y + valy);
+
+    while ((a*a)*(y-0.5) &gt; (b*b)*(x+1)){
+        //region 1
+        if(d1&lt; 0) //select e
+            d1 += b*b*(2*x + 3);
+        else{
+            d1 += b*b*(2*x + 3) + a*a*(-2*y + 2);
+            y--;
+        }
+        x++;
+        glVertex2i(x + valx,y + valy);
+        glVertex2i(-x + valx,y + valy);
+    }
+    d2 = ((b*b)*(x+0.5)*(x+0.5)) + (a*a*(y-1)*(y-1)) - (a*a*b*b);
+    while(y &gt; 0){
+        //region 2
+        if(d2 &lt; 0){
+            d2 += (b*b*(2*x + 2)) + ((a*a) * (-2*y + 3));
+            x++;
+        }
+        else
+            d2 += ((a*a)* (-2*y + 3));
+        y--;
+        glVertex2i(x + valx,y + valy);
+        glVertex2i(-x + valx,y + valy);
+    }
+}
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Circle/" class="btn btn-neutral float-left" title="Circle Drawing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Polygon/" class="btn btn-neutral float-right" title="Line and Polygon Drawing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Circle/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Polygon/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

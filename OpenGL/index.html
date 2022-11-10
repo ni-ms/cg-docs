@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>OpenGL Instantiations - CG Assignment</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "OpenGL Instantiations";
+        var mkdocs_page_input_path = "OpenGL.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CG Assignment
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Story and Screenplay</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">OpenGL Instantiations</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms in OpenGL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Circle/">Circle Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Ellipse/">Ellipse Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Polygon/">Line and Polygon Drawing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Making the storyboard</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Scenes/">Methodology of Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Together/">Putting the panel together</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../doxygen/html/">Deep dive into the code</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CG Assignment</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Introduction &raquo;</li>
+      <li>OpenGL Instantiations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="commands">Commands</h2>
+<p>All the code used to create the OpenGL drawings used the FreeGLUT library, an open-source alternative to the OpenGL Utility Toolkit library. As such, all of them required a couple common instantiations:-</p>
+<pre><code>glutInit(&amp;argc, argv);
+</code></pre>
+<blockquote>
+<p>This function initializes the toolkit and the arguments are the standard ones for passing command-line information.</p>
+</blockquote>
+<pre><code>glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+</code></pre>
+<blockquote>
+<p>This function specifies how the display should be initialized. GLUT_SINGLE specifies that a single display buffer should be allocated and the colors are specified using desired amounts of red, green and blue.</p>
+</blockquote>
+<pre><code> glutInitWindowSize(640,480);
+</code></pre>
+<blockquote>
+<p>This function specifies the screen window should be 640 x 480 pixels in dimensions (initially).</p>
+</blockquote>
+<pre><code>glutInitWindowPosition(100,150);
+</code></pre>
+<blockquote>
+<p>This function specifies the window’s upper left corner should be positioned on the screen 100 pixels from the left edge and 150 pixels from the top edge.</p>
+</blockquote>
+<pre><code>glutCreateWindow(”Testing”);
+</code></pre>
+<blockquote>
+<p>This function opens and displays the screen window with a title of “Testing”.</p>
+</blockquote>
+<h2 id="compiler-flags">Compiler Flags</h2>
+<pre><code>g++ -Wall -DUSEGLEW -o test testfile.cpp -lfreeglut -lglew32 -lglu32 -lopengl32 -lm
+</code></pre>
+<h2 id="miscellaneous-commands">Miscellaneous commands</h2>
+<pre><code>glColor3f(red, green, blue);
+</code></pre>
+<blockquote>
+<p>Specifies the current drawing color</p>
+</blockquote>
+<p><img alt="Color combinations" src="../Algorithms/Images/Img3.PNG" /></p>
+<ul>
+<li>The background is set using glClearColor(red, green, blue, alpha);, where alpha specifies the transparency.</li>
+<li>The above function only sets a state variable, but for the background to actually clear to the set value, glClear(GL_COLOR_BUFFER_BIT); has to be used</li>
+<li>myInit() is a user defined function that was used to set up the coordinate system.</li>
+</ul>
+<h2 id="example-of-a-complete-opengl-program">Example of a complete OpenGL Program</h2>
+<pre><code>#include &lt;windows.h&gt;
+#include &lt;GL/Gl.h&gt;
+#include &lt;GL/glu.h&gt;
+#include &lt;GL/glut.h&gt;
+//&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; myInit &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+void myInit(void) {
+glClearColor(1.0, 1.0, 1.0, 0.0);
+glColor3f(0.0f, 0.0f, 0.0f);
+glPointSize(4.0); // sets the point size to 4 x 4 pixels
+glMatrixMode(GL_PROJECTION); // sets up the appropriate matrices
+glLoadIdentity();
+gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+}
+//&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; myDisplay &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+void myDisplay(void) {
+glClear(GL_COLOR_BUFFER_BIT); // clears the screen to the previously set color glBegin(GL_POINTS);
+glVertex2i(289, 190);
+glVertex2i(320, 128);
+glVertex2i(239, 67);
+glVertex2i(194, 101);
+glVertex2i(129, 83);
+glVertex2i(75, 73);
+glVertex2i(74, 74);
+glVertex2i(20, 10);
+glEnd();
+glFlush(); // send all the output to display
+}
+//&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; main &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+int main(int argc, char** argv) {
+glutInit(&amp;argc, argv);
+int mode = GLUT_RGB|GLUT_SINGLE;
+glutInitDisplayMode(mode);
+glutInitWindowSize(640,480);
+glutInitWindowPosition(100,150);
+glutCreateWindow(&quot;Test Window&quot;);
+myInit();
+glutDisplayFunc(myDisplay);
+glutMainLoop();
+}
+
+</code></pre>
+<h2 id="output">Output <!-- {docsify-ignore} --></h2>
+<blockquote>
+<p><img alt="Output of Example" src="../Algorithms/Images/Img4.PNG" /></p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Story and Screenplay"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Algorithms/Circle/" class="btn btn-neutral float-right" title="Circle Drawing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Algorithms/Circle/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

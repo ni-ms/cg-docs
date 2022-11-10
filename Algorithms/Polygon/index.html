@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Line and Polygon Drawing - CG Assignment</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Line and Polygon Drawing";
+        var mkdocs_page_input_path = "Algorithms\\Polygon.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> CG Assignment
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Story and Screenplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../OpenGL/">OpenGL Instantiations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms in OpenGL</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Circle/">Circle Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Ellipse/">Ellipse Drawing</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Line and Polygon Drawing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Making the storyboard</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Scenes/">Methodology of Drawing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Together/">Putting the panel together</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../doxygen/html/">Deep dive into the code</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">CG Assignment</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Algorithms in OpenGL &raquo;</li>
+      <li>Line and Polygon Drawing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="line-drawing-and-polygon-drawing-algorithm">Line drawing and Polygon Drawing Algorithm</h1>
+<h2 id="description">Description</h2>
+<p>For drawing a line with any slope, we subdivided our drawing routine into four cases:</p>
+<ul>
+<li>m &gt; 0 and dy &lt; dx</li>
+<li>m &gt; 0 and dy &gt; dx</li>
+<li>m &lt; 0 and dy &lt; dx</li>
+<li>m &lt; 0 and dy &gt; dx</li>
+</ul>
+<p>(dy = y1 - y0, dx = x1 - x0)</p>
+<p>We used Bresenham’s Line Algorithm in each of these subcategories.</p>
+<p>Further, we made sure the line is always being drawn towards the positive x-direction only so that there’s only one way in which a given line can be drawn. If this wasn’t implemented, then a line can be drawn from either P0 to P1, or P1 to P0; in such a scenario, there can be differences in pixels when the line passes through the midpoint. Hence having only one direction of drawing a line, removes this inconsistency in line drawing.</p>
+<p>To convince ourselves that this was the best way to draw a line between any given two points, we compared our line with the default line drawing routine of OpenGL using glBegin(GL_LINES) method.</p>
+<p>Unfortunately, we found out that the two algorithms don’t match everywhere. In the picture shown, the black lines of the polygon were drawn using our implementation of Bresenham, while the red lines of the polygon were drawn using the default routine of OpenGL. The red lines should completely supersede the black lines and the black lines shouldn’t be visible, but as you can see from the picture that this is not the case here. The points where the black lines are visible are the points where our algorithm and OpenGL’s algorithm differ.</p>
+<blockquote>
+<p><img alt="Line Drawing Outuput" src="../Images/Img1.PNG" /></p>
+</blockquote>
+<p>After a few hours of scrutiny, we decided we would see for ourselves if our Bresenham’s algorithm is working correctly or not. We opened up Desmos and manually checked against the points being drawn if they were correct or not. And all of them turned out to be indeed correct. This was peculiar now. Searching on the web didn’t give us any concise answer to this issue, and we just concluded that OpenGL doesn’t use Bresenham to plot lines.</p>
+<blockquote>
+<p><img alt="Line Drawing Outuput" src="../Images/Img2.PNG" /></p>
+</blockquote>
+<h2 id="implementation">Implementation</h2>
+<pre><code>void drawDot( GLint x, GLint y)
+{
+glBegin( GL_POINTS );
+glVertex2i( x, y );
+glEnd();
+}
+void swap(int &amp;a, int &amp;b) {         // Just swaps variables.
+    a = a^b;
+    b = a^b;
+    a = a^b;
+}
+
+void lineplot(int x0, int y0, int x1, int y1)
+{
+    int dy = y1 - y0; // = a
+    int dx = x1 - x0; // = -b
+
+    // This is so that the line is always drawn towards positive x direction. This helps remove the minor issue of the line from P1 to P0 and the line from P0 to P1 not being rendered exactly the same.
+
+    if(dx &lt; 0) {
+        swap(x0, x1);
+        swap(y0, y1);
+        dy = y1 - y0;
+        dx = x1 - x0;
+    }
+
+    /*
+        Dividing render routine into 4 subcategories:
+        1) when m &gt; 0 and dy &lt; dx
+        2) when m &gt; 0 and dy &gt; dx
+        3) when m &lt; 0 and dy &lt; dx
+        4) when m &lt; 0 and dy &gt; dx
+    */
+    if(dy &gt;= 0 &amp;&amp; abs(dy) &lt;= dx) {
+        int d = 2*dy - dx;
+
+        int incrE = 2*dy;
+        int incrNE = 2*(dy - dx);
+
+        int x = x0, y = y0;
+        drawDot(x,y);
+
+        while (x &lt; x1){
+            if (d &lt;= 0){ // choose E
+                d += incrE;
+            }
+            else{ // choose NE
+                d += incrNE;
+                y++;
+            }
+            x++;
+            drawDot(x,y);
+        }
+    } else if(dy &gt;= 0 &amp;&amp; abs(dy) &gt; dx) {
+        int d = dy - 2*dx;
+
+        int incrN = -2*dx;
+        int incrNE = 2*(dy - dx);
+
+        int x = x0, y = y0;
+        drawDot(x, y);
+
+        while(y &lt; y1) {
+            if(d &lt;= 0) {    // choose NE
+                d += incrNE;
+                x++;
+            } else {        // choose N
+                d += incrN;
+            }
+            y++;
+            drawDot(x, y);
+        }
+    } else if(dy &lt; 0 &amp;&amp; abs(dy) &lt;= dx) {
+        int d = 2*dy + dx;
+
+        int incrE = 2*dy;
+        int incrSE = 2*(dy + dx);
+
+        int x = x0, y = y0;
+        drawDot(x,y);
+
+        while (x &lt; x1){
+            if (d &lt;= 0){        // choose SE
+                d += incrSE;
+                y--;
+            }
+            else{       // choose E
+                d += incrE;
+            }
+            x++;
+            drawDot(x,y);
+        }  
+    } else if(dy &lt; 0 &amp;&amp; abs(dy) &gt; dx) {
+        int d = dy + 2*dx;
+
+        int incrS = 2*dx;
+        int incrSE = 2*(dy + dx);
+
+        int x = x0, y = y0;
+        drawDot(x, y);
+
+        while(y &gt; y1) {
+            if(d &lt;= 0) {        // choose S
+                d += incrS;
+            } else {        // choose SE
+                d += incrSE;
+                x++;
+            }
+            y--;
+            drawDot(x, y);
+        }
+    }
+}
+
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Additionally, a simple loop was later created to allow for drawing polygons using the lineplot routine as the base. </p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Ellipse/" class="btn btn-neutral float-left" title="Ellipse Drawing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Scenes/" class="btn btn-neutral float-right" title="Methodology of Drawing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Ellipse/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Scenes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

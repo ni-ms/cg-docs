@@ -1,0 +1,513 @@
+\hypertarget{scene_01-_01audi_8cpp}{}\doxysection{F\+:/\+BITS/\+IS F311 L1/dev-\/glut/proj1/final/doxygen-\/input/scene -\/ audi.\+cpp File Reference}
+\label{scene_01-_01audi_8cpp}\index{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/doxygen-\/input/scene -\/ audi.cpp@{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/doxygen-\/input/scene -\/ audi.cpp}}
+{\ttfamily \#include $<$GL/\+Gl.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glut.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}{draw\+Dot}} (GLint x, GLint y)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}{swap}} (int \&a, int \&b)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}{my\+Init}} (void)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}{draw\+Circle}} (int x, int y, int translateX, int translateY)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_a8711960aeebe72238d4c7e6651c562e1}{midpoint\+Circle}} (int radius, int translateX, int translateY)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}{lineplot}} (int x0, int y0, int x1, int y1)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}{draw\+Polygon}} (const int pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int n)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_ac5db65152fe76eba141ddeafe646ce1a}{draw\+Poly\+Line}} (const int pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int n)
+\item 
+void \mbox{\hyperlink{scene_01-_01audi_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}{my\+Display}} (void)
+\item 
+int \mbox{\hyperlink{scene_01-_01audi_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a7242fea9327c0747b47801c13f4e05c9}{screen\+Width}} = 1920
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a8897ff6127a397a8ee4ea76976f8534d}{screen\+Height}} = 1080
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_abc237622ade47b9d38c23fadcd5b3aca}{mode}} = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}{pline1}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_abcac26212674bf86ac98c141a0c89c64}{pline2}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a5cad241125b687eabe0b957c80dde82e}{pline3}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}{pline4}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_ad3d483576918d92092e1389af4ad180b}{pline5}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a47d7a669000f66f3df6833a5607bedde}{pline6}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a8f6060b64239e83f24cd80715356e8f9}{pline7}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a3cc81ced15fe3185a1120df2c910f142}{pline8}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_ada71640328d1e443d2078df6a9a0b686}{pline9}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a93f2823648f8be3387d228ad9b143136}{pline10}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a552515837fe5d58a88923feda684c8b9}{pline11}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}{pline12}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_aca4cd1114c44f5068f913c0758e5fad7}{pgon0}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_adf965244a66313f6f43f2e7c9f507fb0}{pgon1}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_ad2bd2e5a728457203255c9e23befe645}{pgon2}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a6de8f62938c53931209983657980e81e}{pgon3}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}{pgon4}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_af8484ecae627a560996d6e5ca01faac5}{pgon5}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_a24908d793864d4928a429ed778251130}{pgon6}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{scene_01-_01audi_8cpp_afbc511856fc4b68de70a249be70e61f9}{pgon7}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}\label{scene_01-_01audi_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void draw\+Circle (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{translateX,  }\item[{int}]{translateY }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}\label{scene_01-_01audi_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!drawDot@{drawDot}}
+\index{drawDot@{drawDot}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{drawDot()}{drawDot()}}
+{\footnotesize\ttfamily void draw\+Dot (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}\label{scene_01-_01audi_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!drawPolygon@{drawPolygon}}
+\index{drawPolygon@{drawPolygon}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
+{\footnotesize\ttfamily void draw\+Polygon (\begin{DoxyParamCaption}\item[{const int}]{pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ac5db65152fe76eba141ddeafe646ce1a}\label{scene_01-_01audi_8cpp_ac5db65152fe76eba141ddeafe646ce1a}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!drawPolyLine@{drawPolyLine}}
+\index{drawPolyLine@{drawPolyLine}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPolyLine()}{drawPolyLine()}}
+{\footnotesize\ttfamily void draw\+Poly\+Line (\begin{DoxyParamCaption}\item[{const int}]{pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}\label{scene_01-_01audi_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!lineplot@{lineplot}}
+\index{lineplot@{lineplot}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{lineplot()}{lineplot()}}
+{\footnotesize\ttfamily void lineplot (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{scene_01-_01audi_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!main@{main}}
+\index{main@{main}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a8711960aeebe72238d4c7e6651c562e1}\label{scene_01-_01audi_8cpp_a8711960aeebe72238d4c7e6651c562e1}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!midpointCircle@{midpointCircle}}
+\index{midpointCircle@{midpointCircle}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{midpointCircle()}{midpointCircle()}}
+{\footnotesize\ttfamily void midpoint\+Circle (\begin{DoxyParamCaption}\item[{int}]{radius,  }\item[{int}]{translateX,  }\item[{int}]{translateY }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}\label{scene_01-_01audi_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!myDisplay@{myDisplay}}
+\index{myDisplay@{myDisplay}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{myDisplay()}{myDisplay()}}
+{\footnotesize\ttfamily void my\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}\label{scene_01-_01audi_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!myInit@{myInit}}
+\index{myInit@{myInit}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{myInit()}{myInit()}}
+{\footnotesize\ttfamily void my\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}\label{scene_01-_01audi_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!swap@{swap}}
+\index{swap@{swap}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int \&}]{a,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_abc237622ade47b9d38c23fadcd5b3aca}\label{scene_01-_01audi_8cpp_abc237622ade47b9d38c23fadcd5b3aca}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!mode@{mode}}
+\index{mode@{mode}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily const int mode = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_aca4cd1114c44f5068f913c0758e5fad7}\label{scene_01-_01audi_8cpp_aca4cd1114c44f5068f913c0758e5fad7}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon0@{pgon0}}
+\index{pgon0@{pgon0}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon0}{pgon0}}
+{\footnotesize\ttfamily const int pgon0\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{20, 820\},}
+\DoxyCodeLine{    \{145, 820\},}
+\DoxyCodeLine{    \{145, 665\},}
+\DoxyCodeLine{    \{20, 665\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_adf965244a66313f6f43f2e7c9f507fb0}\label{scene_01-_01audi_8cpp_adf965244a66313f6f43f2e7c9f507fb0}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon1@{pgon1}}
+\index{pgon1@{pgon1}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon1}{pgon1}}
+{\footnotesize\ttfamily const int pgon1\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1758, 846\},}
+\DoxyCodeLine{    \{1880, 846\},}
+\DoxyCodeLine{    \{1880, 690\},}
+\DoxyCodeLine{    \{1758, 690\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ad2bd2e5a728457203255c9e23befe645}\label{scene_01-_01audi_8cpp_ad2bd2e5a728457203255c9e23befe645}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon2@{pgon2}}
+\index{pgon2@{pgon2}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon2}{pgon2}}
+{\footnotesize\ttfamily const int pgon2\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a6de8f62938c53931209983657980e81e}\label{scene_01-_01audi_8cpp_a6de8f62938c53931209983657980e81e}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon3@{pgon3}}
+\index{pgon3@{pgon3}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon3}{pgon3}}
+{\footnotesize\ttfamily const int pgon3\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{775, 722\},}
+\DoxyCodeLine{    \{820, 722\},}
+\DoxyCodeLine{    \{820, 571\},}
+\DoxyCodeLine{    \{775, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}\label{scene_01-_01audi_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon4@{pgon4}}
+\index{pgon4@{pgon4}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon4}{pgon4}}
+{\footnotesize\ttfamily const int pgon4\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{914, 722\},}
+\DoxyCodeLine{    \{960, 722\},}
+\DoxyCodeLine{    \{960, 571\},}
+\DoxyCodeLine{    \{914, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_af8484ecae627a560996d6e5ca01faac5}\label{scene_01-_01audi_8cpp_af8484ecae627a560996d6e5ca01faac5}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon5@{pgon5}}
+\index{pgon5@{pgon5}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon5}{pgon5}}
+{\footnotesize\ttfamily const int pgon5\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1054, 722\},}
+\DoxyCodeLine{    \{1115, 722\},}
+\DoxyCodeLine{    \{1115, 571\},}
+\DoxyCodeLine{    \{1054, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a24908d793864d4928a429ed778251130}\label{scene_01-_01audi_8cpp_a24908d793864d4928a429ed778251130}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon6@{pgon6}}
+\index{pgon6@{pgon6}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon6}{pgon6}}
+{\footnotesize\ttfamily const int pgon6\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{319, 430\},}
+\DoxyCodeLine{    \{319, 620\},}
+\DoxyCodeLine{    \{298, 620\},}
+\DoxyCodeLine{    \{293, 668\},}
+\DoxyCodeLine{    \{312, 668\},}
+\DoxyCodeLine{    \{312, 711\},}
+\DoxyCodeLine{    \{360, 724\},}
+\DoxyCodeLine{    \{360, 668\},}
+\DoxyCodeLine{    \{385, 668\},}
+\DoxyCodeLine{    \{385, 730\},}
+\DoxyCodeLine{    \{471, 753\},}
+\DoxyCodeLine{    \{470, 668\},}
+\DoxyCodeLine{    \{495, 668\},}
+\DoxyCodeLine{    \{495, 757\},}
+\DoxyCodeLine{    \{584, 780\},}
+\DoxyCodeLine{    \{584, 672\},}
+\DoxyCodeLine{    \{600, 672\},}
+\DoxyCodeLine{    \{600, 619\},}
+\DoxyCodeLine{    \{580, 619\},}
+\DoxyCodeLine{    \{580, 430\},}
+\DoxyCodeLine{    \{495, 430\},}
+\DoxyCodeLine{    \{495, 619\},}
+\DoxyCodeLine{    \{461, 619\},}
+\DoxyCodeLine{    \{461, 430\},}
+\DoxyCodeLine{    \{385, 430\},}
+\DoxyCodeLine{    \{385, 619\},}
+\DoxyCodeLine{    \{360, 619\},}
+\DoxyCodeLine{    \{360, 430\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_afbc511856fc4b68de70a249be70e61f9}\label{scene_01-_01audi_8cpp_afbc511856fc4b68de70a249be70e61f9}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pgon7@{pgon7}}
+\index{pgon7@{pgon7}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon7}{pgon7}}
+{\footnotesize\ttfamily const int pgon7\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1316, 430\},}
+\DoxyCodeLine{    \{1316, 625\},}
+\DoxyCodeLine{    \{1298, 625\},}
+\DoxyCodeLine{    \{1298, 680\},}
+\DoxyCodeLine{    \{1312, 680\},}
+\DoxyCodeLine{    \{1312, 790\},}
+\DoxyCodeLine{    \{1404, 769\},}
+\DoxyCodeLine{    \{1404, 680\},}
+\DoxyCodeLine{    \{1430, 680\},}
+\DoxyCodeLine{    \{1430, 764\},}
+\DoxyCodeLine{    \{1520, 740\},}
+\DoxyCodeLine{    \{1520, 675\},}
+\DoxyCodeLine{    \{1546, 675\},}
+\DoxyCodeLine{    \{1546, 734\},}
+\DoxyCodeLine{    \{1595, 721\},}
+\DoxyCodeLine{    \{1595, 675\},}
+\DoxyCodeLine{    \{1611, 675\},}
+\DoxyCodeLine{    \{1604, 625\},}
+\DoxyCodeLine{    \{1590, 625\},}
+\DoxyCodeLine{    \{1590, 430\},}
+\DoxyCodeLine{    \{1546, 430\},}
+\DoxyCodeLine{    \{1546, 625\},}
+\DoxyCodeLine{    \{1520, 625\},}
+\DoxyCodeLine{    \{1520, 430\},}
+\DoxyCodeLine{    \{1441, 430\},}
+\DoxyCodeLine{    \{1441, 625\},}
+\DoxyCodeLine{    \{1404, 625\},}
+\DoxyCodeLine{    \{1404, 430\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}\label{scene_01-_01audi_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline1@{pline1}}
+\index{pline1@{pline1}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline1}{pline1}}
+{\footnotesize\ttfamily const int pline1\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 880\},}
+\DoxyCodeLine{    \{190, 880\},}
+\DoxyCodeLine{    \{190, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a93f2823648f8be3387d228ad9b143136}\label{scene_01-_01audi_8cpp_a93f2823648f8be3387d228ad9b143136}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline10@{pline10}}
+\index{pline10@{pline10}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline10}{pline10}}
+{\footnotesize\ttfamily const int pline10\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 230\},}
+\DoxyCodeLine{    \{1223, 230\},}
+\DoxyCodeLine{    \{1345, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a552515837fe5d58a88923feda684c8b9}\label{scene_01-_01audi_8cpp_a552515837fe5d58a88923feda684c8b9}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline11@{pline11}}
+\index{pline11@{pline11}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline11}{pline11}}
+{\footnotesize\ttfamily const int pline11\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 905\},}
+\DoxyCodeLine{    \{1723, 905\},}
+\DoxyCodeLine{    \{1723, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}\label{scene_01-_01audi_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline12@{pline12}}
+\index{pline12@{pline12}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline12}{pline12}}
+{\footnotesize\ttfamily const int pline12\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1054, 430\},}
+\DoxyCodeLine{    \{1115, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_abcac26212674bf86ac98c141a0c89c64}\label{scene_01-_01audi_8cpp_abcac26212674bf86ac98c141a0c89c64}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline2@{pline2}}
+\index{pline2@{pline2}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline2}{pline2}}
+{\footnotesize\ttfamily const int pline2\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{190, 870\},}
+\DoxyCodeLine{    \{285, 736\},}
+\DoxyCodeLine{    \{285, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a5cad241125b687eabe0b957c80dde82e}\label{scene_01-_01audi_8cpp_a5cad241125b687eabe0b957c80dde82e}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline3@{pline3}}
+\index{pline3@{pline3}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline3}{pline3}}
+{\footnotesize\ttfamily const int pline3\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{280, 744\},}
+\DoxyCodeLine{    \{600, 825\},}
+\DoxyCodeLine{    \{600, 905\},}
+\DoxyCodeLine{    \{1290, 905\},}
+\DoxyCodeLine{    \{1290, 825\},}
+\DoxyCodeLine{    \{1617, 755\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}\label{scene_01-_01audi_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline4@{pline4}}
+\index{pline4@{pline4}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline4}{pline4}}
+{\footnotesize\ttfamily const int pline4\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1723, 880\},}
+\DoxyCodeLine{    \{1617, 764\},}
+\DoxyCodeLine{    \{1617, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ad3d483576918d92092e1389af4ad180b}\label{scene_01-_01audi_8cpp_ad3d483576918d92092e1389af4ad180b}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline5@{pline5}}
+\index{pline5@{pline5}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline5}{pline5}}
+{\footnotesize\ttfamily const int pline5\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 905\},}
+\DoxyCodeLine{    \{1723, 905\},}
+\DoxyCodeLine{    \{1723, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a47d7a669000f66f3df6833a5607bedde}\label{scene_01-_01audi_8cpp_a47d7a669000f66f3df6833a5607bedde}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline6@{pline6}}
+\index{pline6@{pline6}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline6}{pline6}}
+{\footnotesize\ttfamily const int pline6\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 230\},}
+\DoxyCodeLine{    \{712, 230\},}
+\DoxyCodeLine{    \{585, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a8f6060b64239e83f24cd80715356e8f9}\label{scene_01-_01audi_8cpp_a8f6060b64239e83f24cd80715356e8f9}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline7@{pline7}}
+\index{pline7@{pline7}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline7}{pline7}}
+{\footnotesize\ttfamily const int pline7\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{765, 0\},}
+\DoxyCodeLine{    \{870, 430\},}
+\DoxyCodeLine{    \{1055, 430\},}
+\DoxyCodeLine{    \{1170, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a3cc81ced15fe3185a1120df2c910f142}\label{scene_01-_01audi_8cpp_a3cc81ced15fe3185a1120df2c910f142}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline8@{pline8}}
+\index{pline8@{pline8}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline8}{pline8}}
+{\footnotesize\ttfamily const int pline8\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 430\},}
+\DoxyCodeLine{    \{820, 430\},}
+\DoxyCodeLine{    \{750, 296\},}
+\DoxyCodeLine{    \{0, 296\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_ada71640328d1e443d2078df6a9a0b686}\label{scene_01-_01audi_8cpp_ada71640328d1e443d2078df6a9a0b686}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!pline9@{pline9}}
+\index{pline9@{pline9}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{pline9}{pline9}}
+{\footnotesize\ttfamily const int pline9\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 430\},}
+\DoxyCodeLine{    \{1110, 430\},}
+\DoxyCodeLine{    \{1185, 297\},}
+\DoxyCodeLine{    \{1920, 297\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a8897ff6127a397a8ee4ea76976f8534d}\label{scene_01-_01audi_8cpp_a8897ff6127a397a8ee4ea76976f8534d}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily const int screen\+Height = 1080}
+
+\mbox{\Hypertarget{scene_01-_01audi_8cpp_a7242fea9327c0747b47801c13f4e05c9}\label{scene_01-_01audi_8cpp_a7242fea9327c0747b47801c13f4e05c9}} 
+\index{scene -\/ audi.cpp@{scene -\/ audi.cpp}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!scene -\/ audi.cpp@{scene -\/ audi.cpp}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily const int screen\+Width = 1920}
+

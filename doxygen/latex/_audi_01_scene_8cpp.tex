@@ -1,0 +1,633 @@
+\hypertarget{_audi_01_scene_8cpp}{}\doxysection{F\+:/\+BITS/\+IS F311 L1/dev-\/glut/proj1/final/\+Computer Graphics/\+Audi Scene.\+cpp File Reference}
+\label{_audi_01_scene_8cpp}\index{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/Computer Graphics/Audi Scene.cpp@{F:/BITS/IS F311 L1/dev-\/glut/proj1/final/Computer Graphics/Audi Scene.cpp}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$GL/\+Gl.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glut.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}{draw\+Dot}} (GLint x, GLint y)
+\begin{DoxyCompactList}\small\item\em Plots a point on the Open\+GL window based on the coordinates provided. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}{swap}} (int \&a, int \&b)
+\begin{DoxyCompactList}\small\item\em Swaps two integers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}{my\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes several state variables of the Open\+GL system with appropriate values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}{draw\+Circle}} (int x, int y, int translateX, int translateY)
+\begin{DoxyCompactList}\small\item\em Draws set of eight points for any given point in a circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_a3d1e7525155cc239f7801178231eabdd}{circle\+Plot}} (int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a7a0b0f33d1d3a820325a517a0d840748}{radius}}, int translateX, int translateY)
+\begin{DoxyCompactList}\small\item\em Circle drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}{lineplot}} (int x0, int y0, int x1, int y1)
+\begin{DoxyCompactList}\small\item\em Line drawing subroutine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}{draw\+Polygon}} (const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}{pts}}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Plots the lines in a cyclic loop to create a polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_ac5db65152fe76eba141ddeafe646ce1a}{draw\+Poly\+Line}} (const int \mbox{\hyperlink{_block-_c_01_scene_8cpp_a4d16011441f41f6aaf73b29bb98d4ee6}{pts}}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em Plots the lines in a loop without creating a closed polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_audi_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}{my\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em The my\+Display function calls all the other drawing subroutines. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_audi_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em The main function from where all the other functions are called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}{screen\+Width}} = 1920
+\begin{DoxyCompactList}\small\item\em Width of the Open\+GL screen output. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}{screen\+Height}} = 1080
+\begin{DoxyCompactList}\small\item\em Height of the Open\+GL screen output. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}{mode}} = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE
+\begin{DoxyCompactList}\small\item\em Using RGB colour space with single buffer mode. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}{pline1}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_abcac26212674bf86ac98c141a0c89c64}{pline2}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a5cad241125b687eabe0b957c80dde82e}{pline3}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}{pline4}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_ad3d483576918d92092e1389af4ad180b}{pline5}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a47d7a669000f66f3df6833a5607bedde}{pline6}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a8f6060b64239e83f24cd80715356e8f9}{pline7}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a3cc81ced15fe3185a1120df2c910f142}{pline8}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_ada71640328d1e443d2078df6a9a0b686}{pline9}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a93f2823648f8be3387d228ad9b143136}{pline10}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a552515837fe5d58a88923feda684c8b9}{pline11}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}{pline12}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_aca4cd1114c44f5068f913c0758e5fad7}{pgon0}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_adf965244a66313f6f43f2e7c9f507fb0}{pgon1}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_ad2bd2e5a728457203255c9e23befe645}{pgon2}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a6de8f62938c53931209983657980e81e}{pgon3}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}{pgon4}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_af8484ecae627a560996d6e5ca01faac5}{pgon5}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_a24908d793864d4928a429ed778251130}{pgon6}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{_audi_01_scene_8cpp_afbc511856fc4b68de70a249be70e61f9}{pgon7}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a3d1e7525155cc239f7801178231eabdd}\label{_audi_01_scene_8cpp_a3d1e7525155cc239f7801178231eabdd}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!circlePlot@{circlePlot}}
+\index{circlePlot@{circlePlot}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{circlePlot()}{circlePlot()}}
+{\footnotesize\ttfamily void circle\+Plot (\begin{DoxyParamCaption}\item[{int}]{radius,  }\item[{int}]{translateX,  }\item[{int}]{translateY }\end{DoxyParamCaption})}
+
+
+
+Circle drawing subroutine. 
+
+This function only calculates the points for one half of a quadrant, and the rest parts are drawn exploiting the 8-\/line of symmetry of a circle. 
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+{\em translateX} & Amount of x value by which the circle needs to be translated about its center. \\
+\hline
+{\em translateY} & Amount of y value by which the circle needs to be translated about its center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}\label{_audi_01_scene_8cpp_ad724e165dc452d0f2ddfcc2ed14aa691}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void draw\+Circle (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{translateX,  }\item[{int}]{translateY }\end{DoxyParamCaption})}
+
+
+
+Draws set of eight points for any given point in a circle. 
+
+As for drawing circle, 8-\/lines of symmetry can be used, so this function draws set of eight points for any given point. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point to be plotted. \\
+\hline
+{\em y} & The y coordinate of the point to be plotted. \\
+\hline
+{\em translateX} & Amount of x value by which the circle needs to be translated about its center. \\
+\hline
+{\em translateY} & Amount of y value by which the circle needs to be translated about its center. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}\label{_audi_01_scene_8cpp_a6d14af29768d7faf0d7bebdecc5faf06}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!drawDot@{drawDot}}
+\index{drawDot@{drawDot}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawDot()}{drawDot()}}
+{\footnotesize\ttfamily void draw\+Dot (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y }\end{DoxyParamCaption})}
+
+
+
+Plots a point on the Open\+GL window based on the coordinates provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point to be plotted. \\
+\hline
+{\em y} & The y coordinate of the point to be plotted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}\label{_audi_01_scene_8cpp_a6aa54d24deaf4dbdf3b3689516fcbf2e}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!drawPolygon@{drawPolygon}}
+\index{drawPolygon@{drawPolygon}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
+{\footnotesize\ttfamily void draw\+Polygon (\begin{DoxyParamCaption}\item[{const int}]{pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Plots the lines in a cyclic loop to create a polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Array of vertices of the polygon. \\
+\hline
+{\em n} & Number of points in the polygon. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ac5db65152fe76eba141ddeafe646ce1a}\label{_audi_01_scene_8cpp_ac5db65152fe76eba141ddeafe646ce1a}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!drawPolyLine@{drawPolyLine}}
+\index{drawPolyLine@{drawPolyLine}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPolyLine()}{drawPolyLine()}}
+{\footnotesize\ttfamily void draw\+Poly\+Line (\begin{DoxyParamCaption}\item[{const int}]{pts\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Plots the lines in a loop without creating a closed polygon. 
+
+Difference between draw\+Polygon and this subroutine, is that here the last line that would make the polygon closed is not drawn. 
+\begin{DoxyParams}{Parameters}
+{\em pts} & Array of endpoints of the polyline. \\
+\hline
+{\em n} & Number of vertices in the polylines. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}\label{_audi_01_scene_8cpp_aa16d6aa1b1b8a08debd5b602af8f9cee}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!lineplot@{lineplot}}
+\index{lineplot@{lineplot}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{lineplot()}{lineplot()}}
+{\footnotesize\ttfamily void lineplot (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Line drawing subroutine. 
+
+This is an implementation of Bresenham Line algorithm for any two points in a cartesian coordinate system. 
+\begin{DoxyParams}{Parameters}
+{\em x0} & The x coordinate of the starting point. \\
+\hline
+{\em y0} & The y coordinate of the starting point. \\
+\hline
+{\em x1} & The x coordinate of the end point. \\
+\hline
+{\em y1} & The y coordinate of the end point. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{_audi_01_scene_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!main@{main}}
+\index{main@{main}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+The main function from where all the other functions are called. 
+
+The main function will call the predefined functions glut\+Init , glut\+Init\+Display\+Mode , glut\+Init\+Window\+Size , glut\+Init\+Window\+Position , glut\+Create\+Window , glut\+Display\+Func , glut\+Main\+Loop. It will also call the user-\/defined function my\+Init.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The count of arguments passed \\
+\hline
+{\em argv} & A character stream \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}\label{_audi_01_scene_8cpp_ac158bfc1571fb83c31d7035c8497a5a3}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!myDisplay@{myDisplay}}
+\index{myDisplay@{myDisplay}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{myDisplay()}{myDisplay()}}
+{\footnotesize\ttfamily void my\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The my\+Display function calls all the other drawing subroutines. 
+
+All the things that would be displayed in the Open\+GL window, would be initiated from this function. \mbox{\Hypertarget{_audi_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}\label{_audi_01_scene_8cpp_a631696ca6a7d57f00a5331b0aeafcee2}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!myInit@{myInit}}
+\index{myInit@{myInit}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{myInit()}{myInit()}}
+{\footnotesize\ttfamily void my\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes several state variables of the Open\+GL system with appropriate values. 
+
+Background color is set to white. Drawing color is set to black. Point size is set to 2 pixels. The matrix mode is set to projection mode. \mbox{\Hypertarget{_audi_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}\label{_audi_01_scene_8cpp_a34cd8fd4d99fbdd4ef97fcc94070b460}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!swap@{swap}}
+\index{swap@{swap}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int \&}]{a,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Swaps two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer value to be swapped. \\
+\hline
+{\em b} & The second integer value to be swapped. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}\label{_audi_01_scene_8cpp_abc237622ade47b9d38c23fadcd5b3aca}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!mode@{mode}}
+\index{mode@{mode}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily const int mode = GLUT\+\_\+\+RGB $\vert$ GLUT\+\_\+\+SINGLE}
+
+
+
+Using RGB colour space with single buffer mode. 
+
+\mbox{\Hypertarget{_audi_01_scene_8cpp_aca4cd1114c44f5068f913c0758e5fad7}\label{_audi_01_scene_8cpp_aca4cd1114c44f5068f913c0758e5fad7}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon0@{pgon0}}
+\index{pgon0@{pgon0}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon0}{pgon0}}
+{\footnotesize\ttfamily const int pgon0\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{20, 820\},}
+\DoxyCodeLine{    \{145, 820\},}
+\DoxyCodeLine{    \{145, 665\},}
+\DoxyCodeLine{    \{20, 665\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_adf965244a66313f6f43f2e7c9f507fb0}\label{_audi_01_scene_8cpp_adf965244a66313f6f43f2e7c9f507fb0}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon1@{pgon1}}
+\index{pgon1@{pgon1}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon1}{pgon1}}
+{\footnotesize\ttfamily const int pgon1\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1758, 846\},}
+\DoxyCodeLine{    \{1880, 846\},}
+\DoxyCodeLine{    \{1880, 690\},}
+\DoxyCodeLine{    \{1758, 690\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ad2bd2e5a728457203255c9e23befe645}\label{_audi_01_scene_8cpp_ad2bd2e5a728457203255c9e23befe645}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon2@{pgon2}}
+\index{pgon2@{pgon2}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon2}{pgon2}}
+{\footnotesize\ttfamily const int pgon2\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a6de8f62938c53931209983657980e81e}\label{_audi_01_scene_8cpp_a6de8f62938c53931209983657980e81e}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon3@{pgon3}}
+\index{pgon3@{pgon3}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon3}{pgon3}}
+{\footnotesize\ttfamily const int pgon3\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{775, 722\},}
+\DoxyCodeLine{    \{820, 722\},}
+\DoxyCodeLine{    \{820, 571\},}
+\DoxyCodeLine{    \{775, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}\label{_audi_01_scene_8cpp_a3fdcc8284fe3f7f85d6eb5b97e7d5ebb}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon4@{pgon4}}
+\index{pgon4@{pgon4}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon4}{pgon4}}
+{\footnotesize\ttfamily const int pgon4\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{914, 722\},}
+\DoxyCodeLine{    \{960, 722\},}
+\DoxyCodeLine{    \{960, 571\},}
+\DoxyCodeLine{    \{914, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_af8484ecae627a560996d6e5ca01faac5}\label{_audi_01_scene_8cpp_af8484ecae627a560996d6e5ca01faac5}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon5@{pgon5}}
+\index{pgon5@{pgon5}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon5}{pgon5}}
+{\footnotesize\ttfamily const int pgon5\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1054, 722\},}
+\DoxyCodeLine{    \{1115, 722\},}
+\DoxyCodeLine{    \{1115, 571\},}
+\DoxyCodeLine{    \{1054, 571\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a24908d793864d4928a429ed778251130}\label{_audi_01_scene_8cpp_a24908d793864d4928a429ed778251130}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon6@{pgon6}}
+\index{pgon6@{pgon6}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon6}{pgon6}}
+{\footnotesize\ttfamily const int pgon6\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{319, 430\},}
+\DoxyCodeLine{    \{319, 620\},}
+\DoxyCodeLine{    \{298, 620\},}
+\DoxyCodeLine{    \{293, 668\},}
+\DoxyCodeLine{    \{312, 668\},}
+\DoxyCodeLine{    \{312, 711\},}
+\DoxyCodeLine{    \{360, 724\},}
+\DoxyCodeLine{    \{360, 668\},}
+\DoxyCodeLine{    \{385, 668\},}
+\DoxyCodeLine{    \{385, 730\},}
+\DoxyCodeLine{    \{471, 753\},}
+\DoxyCodeLine{    \{470, 668\},}
+\DoxyCodeLine{    \{495, 668\},}
+\DoxyCodeLine{    \{495, 757\},}
+\DoxyCodeLine{    \{584, 780\},}
+\DoxyCodeLine{    \{584, 672\},}
+\DoxyCodeLine{    \{600, 672\},}
+\DoxyCodeLine{    \{600, 619\},}
+\DoxyCodeLine{    \{580, 619\},}
+\DoxyCodeLine{    \{580, 430\},}
+\DoxyCodeLine{    \{495, 430\},}
+\DoxyCodeLine{    \{495, 619\},}
+\DoxyCodeLine{    \{461, 619\},}
+\DoxyCodeLine{    \{461, 430\},}
+\DoxyCodeLine{    \{385, 430\},}
+\DoxyCodeLine{    \{385, 619\},}
+\DoxyCodeLine{    \{360, 619\},}
+\DoxyCodeLine{    \{360, 430\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_afbc511856fc4b68de70a249be70e61f9}\label{_audi_01_scene_8cpp_afbc511856fc4b68de70a249be70e61f9}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pgon7@{pgon7}}
+\index{pgon7@{pgon7}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pgon7}{pgon7}}
+{\footnotesize\ttfamily const int pgon7\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{     }
+\DoxyCodeLine{    \{1316, 430\},}
+\DoxyCodeLine{    \{1316, 625\},}
+\DoxyCodeLine{    \{1298, 625\},}
+\DoxyCodeLine{    \{1298, 680\},}
+\DoxyCodeLine{    \{1312, 680\},}
+\DoxyCodeLine{    \{1312, 790\},}
+\DoxyCodeLine{    \{1404, 769\},}
+\DoxyCodeLine{    \{1404, 680\},}
+\DoxyCodeLine{    \{1430, 680\},}
+\DoxyCodeLine{    \{1430, 764\},}
+\DoxyCodeLine{    \{1520, 740\},}
+\DoxyCodeLine{    \{1520, 675\},}
+\DoxyCodeLine{    \{1546, 675\},}
+\DoxyCodeLine{    \{1546, 734\},}
+\DoxyCodeLine{    \{1595, 721\},}
+\DoxyCodeLine{    \{1595, 675\},}
+\DoxyCodeLine{    \{1611, 675\},}
+\DoxyCodeLine{    \{1604, 625\},}
+\DoxyCodeLine{    \{1590, 625\},}
+\DoxyCodeLine{    \{1590, 430\},}
+\DoxyCodeLine{    \{1546, 430\},}
+\DoxyCodeLine{    \{1546, 625\},}
+\DoxyCodeLine{    \{1520, 625\},}
+\DoxyCodeLine{    \{1520, 430\},}
+\DoxyCodeLine{    \{1441, 430\},}
+\DoxyCodeLine{    \{1441, 625\},}
+\DoxyCodeLine{    \{1404, 625\},}
+\DoxyCodeLine{    \{1404, 430\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}\label{_audi_01_scene_8cpp_a6f1e6b8c8378efb7c69fb12dd429de50}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline1@{pline1}}
+\index{pline1@{pline1}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline1}{pline1}}
+{\footnotesize\ttfamily const int pline1\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 880\},}
+\DoxyCodeLine{    \{190, 880\},}
+\DoxyCodeLine{    \{190, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a93f2823648f8be3387d228ad9b143136}\label{_audi_01_scene_8cpp_a93f2823648f8be3387d228ad9b143136}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline10@{pline10}}
+\index{pline10@{pline10}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline10}{pline10}}
+{\footnotesize\ttfamily const int pline10\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 230\},}
+\DoxyCodeLine{    \{1223, 230\},}
+\DoxyCodeLine{    \{1345, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a552515837fe5d58a88923feda684c8b9}\label{_audi_01_scene_8cpp_a552515837fe5d58a88923feda684c8b9}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline11@{pline11}}
+\index{pline11@{pline11}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline11}{pline11}}
+{\footnotesize\ttfamily const int pline11\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 905\},}
+\DoxyCodeLine{    \{1723, 905\},}
+\DoxyCodeLine{    \{1723, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}\label{_audi_01_scene_8cpp_a91dde44d4be9eb86cbf43dd9480b3652}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline12@{pline12}}
+\index{pline12@{pline12}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline12}{pline12}}
+{\footnotesize\ttfamily const int pline12\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1054, 430\},}
+\DoxyCodeLine{    \{1115, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_abcac26212674bf86ac98c141a0c89c64}\label{_audi_01_scene_8cpp_abcac26212674bf86ac98c141a0c89c64}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline2@{pline2}}
+\index{pline2@{pline2}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline2}{pline2}}
+{\footnotesize\ttfamily const int pline2\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{190, 870\},}
+\DoxyCodeLine{    \{285, 736\},}
+\DoxyCodeLine{    \{285, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a5cad241125b687eabe0b957c80dde82e}\label{_audi_01_scene_8cpp_a5cad241125b687eabe0b957c80dde82e}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline3@{pline3}}
+\index{pline3@{pline3}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline3}{pline3}}
+{\footnotesize\ttfamily const int pline3\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{280, 744\},}
+\DoxyCodeLine{    \{600, 825\},}
+\DoxyCodeLine{    \{600, 905\},}
+\DoxyCodeLine{    \{1290, 905\},}
+\DoxyCodeLine{    \{1290, 825\},}
+\DoxyCodeLine{    \{1617, 755\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}\label{_audi_01_scene_8cpp_a873ce3c624848a150f3ad8a5a5ae78ef}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline4@{pline4}}
+\index{pline4@{pline4}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline4}{pline4}}
+{\footnotesize\ttfamily const int pline4\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1723, 880\},}
+\DoxyCodeLine{    \{1617, 764\},}
+\DoxyCodeLine{    \{1617, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ad3d483576918d92092e1389af4ad180b}\label{_audi_01_scene_8cpp_ad3d483576918d92092e1389af4ad180b}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline5@{pline5}}
+\index{pline5@{pline5}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline5}{pline5}}
+{\footnotesize\ttfamily const int pline5\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 905\},}
+\DoxyCodeLine{    \{1723, 905\},}
+\DoxyCodeLine{    \{1723, 430\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a47d7a669000f66f3df6833a5607bedde}\label{_audi_01_scene_8cpp_a47d7a669000f66f3df6833a5607bedde}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline6@{pline6}}
+\index{pline6@{pline6}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline6}{pline6}}
+{\footnotesize\ttfamily const int pline6\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 230\},}
+\DoxyCodeLine{    \{712, 230\},}
+\DoxyCodeLine{    \{585, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a8f6060b64239e83f24cd80715356e8f9}\label{_audi_01_scene_8cpp_a8f6060b64239e83f24cd80715356e8f9}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline7@{pline7}}
+\index{pline7@{pline7}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline7}{pline7}}
+{\footnotesize\ttfamily const int pline7\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{765, 0\},}
+\DoxyCodeLine{    \{870, 430\},}
+\DoxyCodeLine{    \{1055, 430\},}
+\DoxyCodeLine{    \{1170, 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a3cc81ced15fe3185a1120df2c910f142}\label{_audi_01_scene_8cpp_a3cc81ced15fe3185a1120df2c910f142}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline8@{pline8}}
+\index{pline8@{pline8}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline8}{pline8}}
+{\footnotesize\ttfamily const int pline8\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{0, 430\},}
+\DoxyCodeLine{    \{820, 430\},}
+\DoxyCodeLine{    \{750, 296\},}
+\DoxyCodeLine{    \{0, 296\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_ada71640328d1e443d2078df6a9a0b686}\label{_audi_01_scene_8cpp_ada71640328d1e443d2078df6a9a0b686}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!pline9@{pline9}}
+\index{pline9@{pline9}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{pline9}{pline9}}
+{\footnotesize\ttfamily const int pline9\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{    \{1920, 430\},}
+\DoxyCodeLine{    \{1110, 430\},}
+\DoxyCodeLine{    \{1185, 297\},}
+\DoxyCodeLine{    \{1920, 297\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}\label{_audi_01_scene_8cpp_a8897ff6127a397a8ee4ea76976f8534d}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily const int screen\+Height = 1080}
+
+
+
+Height of the Open\+GL screen output. 
+
+\mbox{\Hypertarget{_audi_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}\label{_audi_01_scene_8cpp_a7242fea9327c0747b47801c13f4e05c9}} 
+\index{Audi Scene.cpp@{Audi Scene.cpp}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!Audi Scene.cpp@{Audi Scene.cpp}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily const int screen\+Width = 1920}
+
+
+
+Width of the Open\+GL screen output. 
+
